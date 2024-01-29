@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grocery Mart</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .item-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 100px;
+      flex-direction: row;
+    }
+
+    .item {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: center;
+    }
+
+    button {
+      background-color: #4caf50;
+      color: white;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .cart {
+      margin-top: 20px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+  background: black;
+}
+.heading ul {
+  display: flex;
+}
+.logo a {
+  color: white;
+  transition-duration: 1s;
+  font-weight: 800;
+}
+.logo a:hover {
+  color: rgb(240, 197, 6);
+  transition-duration: 1s;
+}
+.heading ul li {
+  list-style: none;
+}
+.heading ul li a {
+  margin: 5px;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  position: relative;
+  color: white;
+  margin: 2px 14px;
+  font-size: 18px;
+  transition-duration: 1s;
+}
+.heading ul li a:active {
+  color: red;
+}
+.heading ul li a:hover {
+  color: rgb(243, 168, 7);
+  transition-duration: 1s;
+}
+
+.heading ul li a::before {
+  content: "";
+  height: 2px;
+  width: 0px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: white;
+  transition-duration: 1s;
+}
+.heading ul li a:hover::before {
+  width: 100%;
+  transition-duration: 1s;
+  background-color: rgb(243, 168, 7);
+}
+#input {
+  height: 30px;
+  width: 300px;
+  text-decoration: none;
+  border: 0px;
+  padding: 5px;
+}
+.logo a {
+  color: white;
+  font-size: 35px;
+  font-weight: 500;
+  text-decoration: none;
+}
+ion-icon {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  color: black;
+}
+ion-icon:hover {
+  cursor: pointer;
+}
+.search a {
+  display: flex;
+}
+header a ion-icon {
+  position: relative;
+  right: 3px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  align-items: center;
+  color: white;
+}
+
+.footer1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  margin-top: 15px;
+}
+.social-media {
+  display: flex;
+  justify-content: center;
+  color: white;
+  flex-wrap: wrap;
+}
+.social-media a {
+  color: white;
+  margin: 20px;
+  border-radius: 5px;
+  margin-top: 10px;
+  color: white;
+}
+.social-media a ion-icon {
+  color: white;
+  background-color: black;
+}
+.social-media a:hover ion-icon {
+  color: red;
+  transform: translateY(5px);
+}
+.footer2 {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  text-decoration: none;
+  flex-wrap: wrap;
+}
+.footer0 {
+  font-weight: 1200;
+  transition-duration: 1s;
+}
+.footer0:hover {
+  color: rgb(243, 168, 7);
+}
+.footer2 .heading {
+  font-weight: 900;
+  font-size: 18px;
+}
+.footer3 {
+  margin-top: 60px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.footer2 .heading:hover {
+  color: rgb(243, 168, 7);
+}
+.footer2 .div:hover {
+  transform: scale(1.05);
+}
+.footer3 h4 {
+  margin: 0 10px;
+}
+.footer2 div {
+  margin: 10px;
+}
+.menu {
+  visibility: hidden;
+}
+.heading1 .ham:active {
+  color: red;
+}
+.items {
+  overflow: hidden;
+}
+.ham,
+.close {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1250px) {
+  .heading ul li {
+    display: none;
+  }
+}
+
+  .items {
+    transform: scale(0.9);
+  }
+  .img-slider img {
+    height: 60vw;
+    width: 80vw;
+  }
+  .ham:active {
+    color: red;
+  }
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu a ion-icon {
+    position: absolute;
+  }
+
+
+  .search a {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .contact {
+      text-align: center;
+      margin:120px; /* Add margin-bottom for space */
+    }
+
+    .con {
+      text-align: center;
+      margin:55px; /* Add margin-bottom for space */
+    }
+
+  </style>
+</head>
+<body>
+
+ 
+  <br>
+  <br>
+  <header>
+    <div class="logo"><a href="#">ShoPperZ</a></div>
+        <div class="menu">
+      <a href="#">
+        <ion-icon name="close" class="close"></ion-icon>
+      </a>
+
+      <ul>
+        <li><a href="home1.html" class="under">HOME</a></li>
+        <li><a href="home.html" class="under">SHOP</a></li>
+        <li><a href="discount.html" class="under">OUR PRODUCTS</a></li>
+        <li><a href="contact.html" class="under">CONTACT US</a></li>
+        <li><a href="about_us.html" class="under">ABOUT US</a></li>
+      </ul>
+    </div>
+    <div class="search">
+
+      <a href=""><input type="text" placeholder="search products" id="input">
+        <ion-icon class="s" name="search"></ion-icon>
+      </a>
+    </div>
+    <div class="heading">
+      <ul>
+        <li><a href="home1.html" class="under">HOME</a></li>
+        <li><a href="home.html" class="under">SHOP</a></li>
+        <li><a href="discount.html" class="under">OUR PRODUCTS</a></li>
+        <li><a href="contact.html" class="under">CONTACT US</a></li>
+        <li><a href="about_us.html" class="under">ABOUT US</a></li>
+      </ul>
+    </div>
+    <div class="heading1">
+      <ion-icon name="menu" class="ham"></ion-icon>
+    </div>
+  </header>
+ 
+
+</script>
+
+
+
+
+  </style>
+</head>
+<body>
+
+<h1>Welcome to Special Offers at Grocery Mart!</h1>
+<br>
+<br>
+<div class="item-list" id="itemList"></div>
+<div class="cart" id="cart">
+  <h2>Shopping Cart</h2>
+  <ul id="cartItems"></ul>
+</div>
+
+<script>
+  const itemList = [
+    { id: 1, category: 'Fruits', name: 'Apple', discount: 10 ,image:"https://tse2.mm.bing.net/th?id=OIP.Hb3Tz89ntAZ1pQLRY86-zQHaE7&pid=Api&P=0&h=180.jpg"},
+    { id: 2, category: 'Fruits', name: 'Banana', discount: 15 ,image:"https://tse3.mm.bing.net/th?id=OIP.dGbZ5iY-tcyCgTFrj64PVQHaHa&pid=Api&P=0&h=180.jpg"},
+    { id: 3, category: 'Vegetables', name: 'Carrot', discount: 20 ,image:"https://tse3.mm.bing.net/th?id=OIP.zDlnPHZ5mb3_W-SanNkVDQHaHa&pid=Api&P=0&h=180.jpg"},
+    { id: 4, category: 'Vegetables', name: 'Tomato', discount: 25 ,image:"https://tse4.mm.bing.net/th?id=OIP.8cNWwvfJsvMkZzAbNLC58AHaGK&pid=Api&P=0&h=180.jpg"},
+    { id: 5, category: 'Meats', name: 'Chicken', discount: 12,image:"https://tse4.mm.bing.net/th?id=OIP.iH9DmzhrXpMRnCAssBEowAHaE5&pid=Api&P=0&h=180.jpg"},
+    { id: 6, category: 'Meats', name: 'Fish', discount: 18,image:"https://tse1.mm.bing.net/th?id=OIP.xcGZ1Fbz7rBOaInuAri3qQHaEK&pid=Api&P=0&h=180.jpg" },
+  ];
+
+  const cart = [];
+
+  const addToCart = (item) => {
+    cart.push(item);
+    renderCart();
+  };
+
+  const renderItems = () => {
+    const itemListElement = document.getElementById('itemList');
+    itemListElement.innerHTML = '';
+
+    itemList.forEach((item) => {
+      const itemElement = document.createElement('div');
+      itemElement.classList.add('item');
+      itemElement.innerHTML = `
+        <p>${item.category}</p>
+        <img src="${item.image}" alt="${item.name}" style="max-width: 100px; max-height: 100px;">
+        <p>${item.name}</p>
+        <p>Discount: ${item.discount}% off</p>
+        <button onclick="addToCart(${JSON.stringify(item)})">Add to Cart</button>
+      `;
+      itemListElement.appendChild(itemElement);
+    });
+  };
+
+  const renderCart = () => {
+    const cartElement = document.getElementById('cartItems');
+    cartElement.innerHTML = '';
+
+    cart.forEach((item, index) => {
+      const cartItemElement = document.createElement('li');
+      cartItemElement.textContent = `${item.name} (${item.category}) - ${item.discount}% off`;
+      cartElement.appendChild(cartItemElement);
+    });
+  };
+
+  // Initial rendering
+  renderItems();
+
+
+
+
+  
+</script>
+
+
+<div class="footer2">
+  <div class="product">
+    <div class="heading">Products</div>
+    <div class="div">Sell your Products</div>
+    <div class="div">Advertise</div>
+    <div class="div">Pricing</div>
+    <div class="div">Product Buisness</div>
+
+  </div>
+  <div class="services">
+    <div class="heading">Services</div>
+    <div class="div">Return</div>
+    <div class="div">Cash Back</div>
+    <div class="div">Affiliate Marketing</div>
+    <div class="div">Others</div>
+  </div>
+  <div class="Company">
+    <div class="heading">Company</div>
+    <div class="div">Complaint</div>
+    <div class="div">Careers</div>
+    <div class="div">Affiliate Marketing</div>
+    <div class="div">Support</div>
+  </div>
+  <div class="Get Help">
+    <div class="heading">Get Help</div>
+    <div class="div">Help Center</div>
+    <div class="div">Privacy Policy</div>
+    <div class="div">Terms</div>
+    <div class="div">Login</div>
+  </div>
+</div>
+<div class="footer3">Copyright © <h4>ShoPperZ</h4> 2021-2028</div>
+</footer>
+<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+<script src="./ecommerce.js"></script>
+
+
+</body>
+</html>

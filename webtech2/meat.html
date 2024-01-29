@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="C:\Users\sushm\OneDrive\Desktop\webtech2\home.css">
+  <link href=""C:\Users\sushm\OneDrive\Desktop\webtech2\home.css"" rel="stylesheet">
+  <title>Meat Shop</title>
+
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f4f4;
+/*background-image:"https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3B4NzY0OTU1LWltYWdlLWt3dnhlMmNsLmpwZw.jpg"*/
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    .meat-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+
+    img {
+      width: 150px;
+      height: 150px;
+      cursor: pointer;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin: 5px;
+    }
+
+    button {
+      background-color: #4caf50;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 5px;
+      display: none;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .options {
+      display: none;
+    }
+
+    .view-cart {
+      text-align: right;
+      margin-top: 20px;
+    }
+
+    .cart {
+      display: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+
+    }
+
+
+  </style>
+</head>
+
+<body background="https://img.freepik.com/free-photo/gray-wall-textures-background_74190-4389.jpg">
+
+
+  <br>
+  <br>
+  <header>
+    <div class="logo"><a href="#">ShoPperZ</a></div>
+    <div class="menu">
+      <a href="about_us.html">
+        <ion-icon name="close" class="close"></ion-icon>
+      </a>
+
+      <ul>
+        <li><a href="home1.html" class="under">HOME</a></li>
+        <li><a href="home.html" class="under">SHOP</a></li>
+        <li><a href="discount.html" class="under">OUR PRODUCTS</a></li>
+        <li><a href="contact.html" class="under">CONTACT US</a></li>
+        <li><a href="about_us.html" class="under">ABOUT US</a></li>
+      </ul>
+    </div>
+    <div class="search">
+
+      <a href="about_us.html"><input type="text" placeholder="search products" id="input">
+        <ion-icon class="s" name="search"></ion-icon>
+      </a>
+    </div>
+    <div class="heading">
+      <ul>
+        <li><a href="home1.html" class="under">HOME</a></li>
+        <li><a href="home.html" class="under">SHOP</a></li>
+        <li><a href="discount.html" class="under">OUR PRODUCTS</a></li>
+        <li><a href="contact.html" class="under">CONTACT US</a></li>
+        <li><a href="about_us.html" class="under">ABOUT US</a></li>
+      </ul>
+    </div>
+    <div class="heading1">
+      <ion-icon name="menu" class="ham"></ion-icon>
+    </div>
+  </header>
+
+
+  <div class="meat-container">
+    <div class="meat" id="chicken">
+      <img src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/d654ce6f-3b1a-efb1-ce66-64b3a4afb655/original/Chicken_(1)_(1).png" alt="Chicken" onclick="toggleOptions('chicken')" />
+      <p>Chicken</p>
+      <div id="allergy_info_chicken" class="options">
+        <!-- <p>Allergy Info: None</p> -->
+      </div>
+      <button onclick="toggleAllergyInfo('chicken')">Allergy Info</button>
+      <div id="nutritional_value_chicken" class="options">
+        <!--<p>High in Protein</p>-->
+      </div>
+      <button onclick="toggleNutritionalValue('chicken')">Nutritional Value</button>
+      <p>Price: $5.0 per kg</p>
+      <p id="quantity_label_chicken" class="options">Quantity: <span id="quantity_chicken">1</span></p>
+      <p id="amount_label_chicken" class="options">Amount: $<span id="amount_chicken">5.0</span></p>
+      <button onclick="incrementQuantity('chicken')">+</button>
+      <button onclick="addToCart('chicken')">Add to Cart</button>
+    </div>
+
+    <div class="meat" id="mutton">
+      <img src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/2119874c-38a6-df8c-22f1-5cd8a2eb4d80/original/Mutton_(1)_(1).png" alt="Mutton" onclick="toggleOptions('mutton')" />
+      <p>Mutton</p>
+      <div id="allergy_info_mutton" class="options">
+        <!-- <p>Allergy Info: None</p> -->
+      </div>
+      <button onclick="toggleAllergyInfo('mutton')">Allergy Info</button>
+      <div id="nutritional_value_mutton" class="options">
+        <!--<p>Rich in Iron</p>-->
+      </div>
+      <button onclick="toggleNutritionalValue('mutton')">Nutritional Value</button>
+      <p>Price: $8.0 per kg</p>
+      <p id="quantity_label_mutton" class="options">Quantity: <span id="quantity_mutton">1</span></p>
+      <p id="amount_label_mutton" class="options">Amount: $<span id="amount_mutton">8.0</span></p>
+      <button onclick="incrementQuantity('mutton')">+</button>
+      <button onclick="addToCart('mutton')">Add to Cart</button>
+    </div>
+
+    <div class="meat" id="pork">
+      <img src="https://fooppers.in/wp-content/uploads/2021/02/Pork-Curry-Cut-Boneless.jpg" alt="Pork" onclick="toggleOptions('pork')" />
+      <p>Pork</p>
+      <div id="allergy_info_pork" class="options">
+        <!-- <p>Allergy Info: None</p> -->
+      </div>
+      <button onclick="toggleAllergyInfo('pork')">Allergy Info</button>
+      <div id="nutritional_value_pork" class="options">
+        <!--<p>High in B Vitamins</p>-->
+      </div>
+      <button onclick="toggleNutritionalValue('pork')">Nutritional Value</button>
+      <p>Price: $6.0 per kg</p>
+      <p id="quantity_label_pork" class="options">Quantity: <span id="quantity_pork">1</span></p>
+      <p id="amount_label_pork" class="options">Amount: $<span id="amount_pork">6.0</span></p>
+      <button onclick="incrementQuantity('pork')">+</button>
+      <button onclick="addToCart('pork')">Add to Cart</button>
+    </div>
+
+    <div class="meat" id="prawn">
+      <img src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/82b8b842-3d62-955f-6076-c57ca8fdb4c5/original/Prawns.png" alt="Prawn" onclick="toggleOptions('prawn')" />
+      <p>Prawn</p>
+      <div id="allergy_info_prawn" class="options">
+        <!-- <p>Allergy Info: None</p> -->
+      </div>
+      <button onclick="toggleAllergyInfo('prawn')">Allergy Info</button>
+      <div id="nutritional_value_prawn" class="options">
+        <!--<p>Low in Fat, High in Protein</p>-->
+      </div>
+      <button onclick="toggleNutritionalValue('prawn')">Nutritional Value</button>
+      <p>Price: $12.0 per kg</p>
+      <p id="quantity_label_prawn" class="options">Quantity: <span id="quantity_prawn">1</span></p>
+      <p id="amount_label_prawn" class="options">Amount: $<span id="amount_prawn">12.0</span></p>
+      <button onclick="incrementQuantity('prawn')">+</button>
+      <button onclick="addToCart('prawn')">Add to Cart</button>
+    </div>
+
+    <div class="meat" id="fish">
+      <img src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/52ed9676-ec28-711e-dd8a-55d4ea17c324/original/Fish_(1)_(1)_(1).png" alt="Fish" onclick="toggleOptions('fish')" />
+      <p>Fish</p>
+      <div id="allergy_info_fish" class="options">
+        <!-- <p>Allergy Info: None</p> -->
+      </div>
+      <button onclick="toggleAllergyInfo('fish')">Allergy Info</button>
+      <div id="nutritional_value_fish" class="options">
+        <!--<p>High in Omega-3 Fatty Acids</p>-->
+      </div>
+      <button onclick="toggleNutritionalValue('fish')">Nutritional Value</button>
+      <p>Price: $10.0 per kg</p>
+      <p id="quantity_label_fish" class="options">Quantity: <span id="quantity_fish">1</span></p>
+      <p id="amount_label_fish" class="options">Amount: $<span id="amount_fish">10.0</span></p>
+      <button onclick="incrementQuantity('fish')">+</button>
+      <button onclick="addToCart('fish')">Add to Cart</button>
+    </div>
+
+    <div class="meat" id="crab">
+      <img src="https://th.bing.com/th/id/OIP.VZaeNnYm-2bWYAw--pd0GAHaE7?rs=1&pid=ImgDetMain" alt="Crab" onclick="toggleOptions('crab')" />
+      <p>Crab</p>
+      <div id="allergy_info_crab" class="options">
+        <!-- <p>Allergy Info: None</p> -->
+      </div>
+      <button onclick="toggleAllergyInfo('crab')">Allergy Info</button>
+      <div id="nutritional_value_crab" class="options">
+        <!--<p>Rich in Selenium</p>-->
+      </div>
+      <button onclick="toggleNutritionalValue('crab')">Nutritional Value</button>
+      <p>Price: $15.0 per kg</p>
+      <p id="quantity_label_crab" class="options">Quantity: <span id="quantity_crab">1</span></p>
+      <p id="amount_label_crab" class="options">Amount: $<span id="amount_crab">15.0</span></p>
+      <button onclick="incrementQuantity('crab')">+</button>
+      <button onclick="addToCart('crab')">Add to Cart</button>
+    </div>
+
+    <!-- ... (your existing code) ... -->
+
+  </div>
+
+  <div class="view-cart">
+    <a href="#" onclick="toggleCart()">View Cart</a>
+  </div>
+
+  <div class="cart">
+    <h2>Shopping Cart</h2>
+    <div id="cart-message"></div>
+    <ul id="cart-list"></ul>
+  </div>
+
+  <script>
+    function toggleOptions(meat) {
+      const options = document.querySelectorAll(`#${meat} .options, #${meat} button`);
+      options.forEach(option => option.style.display = option.style.display === 'none' ? 'block' : 'none');
+    }
+
+    function toggleNutritionalValue(meat) {
+      const nutritionalValueElement = document.getElementById(`nutritional_value_${meat}`);
+      const allergyInfoElement = document.getElementById(`allergy_info_${meat}`);
+
+      // Set the nutritional information based on the meat
+      let nutritionalInfo = '';
+
+      // Add more cases for other meats as needed
+      switch (meat) {
+        case 'chicken':
+          nutritionalInfo = 'High in Protein.';
+          break;
+        case 'mutton':
+          nutritionalInfo = 'Rich in Iron.';
+          break;
+        case 'pork':
+          nutritionalInfo = 'High in B Vitamins.';
+          break;
+        case 'prawn':
+          nutritionalInfo = 'Low in Fat, High in Protein.';
+          break;
+        case 'fish':
+          nutritionalInfo = 'High in Omega-3 Fatty Acids.';
+          break;
+        case 'crab':
+          nutritionalInfo = 'Rich in Selenium.';
+          break;
+        // Add more cases for other meats here
+
+        default:
+          nutritionalInfo = 'Nutritional information not available.';
+      }
+
+      nutritionalValueElement.innerHTML = `<p>Nutritional Value: ${nutritionalInfo}</p>`;
+
+      nutritionalValueElement.style.display = 'block';
+      allergyInfoElement.style.display = 'none';
+    }
+
+function toggleAllergyInfo(meat) {
+  const allergyInfoElement = document.getElementById(`allergy_info_${meat}`);
+  const nutritionalValueElement = document.getElementById(`nutritional_value_${meat}`);
+
+  // Set the allergy information based on the meat
+  let allergyInfo = '';
+
+  // Add more cases for other meats as needed
+  switch (meat) {
+    case 'chicken':
+      allergyInfo = 'Allergy Info: None';
+      break;
+    case 'mutton':
+      allergyInfo = 'Allergy Info: hemorrhoids';
+      break;
+    case 'pork':
+      allergyInfo = 'Allergy Info: Pork-Cat Syndrome';
+      break;
+    case 'prawn':
+      allergyInfo = 'Allergy Info: shellfish allergy';
+      break;
+    case 'fish':
+      allergyInfo = 'Allergy Info: fish allergy';
+      break;
+    case 'crab':
+      allergyInfo = 'Allergy Info: Shellfish allergy';
+      break;
+    // Add more cases for other meats here
+
+    default:
+      allergyInfo = 'Allergy information not available.';
+  }
+
+  allergyInfoElement.innerHTML = `<p>${allergyInfo}</p>`;
+
+  // Show the allergy information, hide nutritional value
+  allergyInfoElement.style.display = 'block';
+  nutritionalValueElement.style.display = 'none';
+}
+
+
+    function addToCart(meat) {
+      const quantityElement = document.getElementById(`quantity_${meat}`);
+      const amountElement = document.getElementById(`amount_${meat}`);
+      const currentQuantity = parseInt(quantityElement.innerText, 10);
+      const currentAmount = parseFloat(amountElement.innerText);
+
+      const cartList = document.getElementById('cart-list');
+      const listItem = document.createElement('li');
+      listItem.innerText = `${meat} - Quantity: ${currentQuantity}, Amount: $${currentAmount.toFixed(2)}`;
+
+      cartList.appendChild(listItem);
+      document.getElementById('cart-message').innerText = `${meat} added to cart.`;
+
+      // Show remove button
+      const removeButton = document.createElement('button');
+      removeButton.innerText = 'Remove';
+      removeButton.onclick = function () {
+        listItem.remove();
+        document.getElementById('cart-message').innerText = `${meat} removed from cart.`;
+        removeButton.remove(); // Remove the button after removal
+      };
+      listItem.appendChild(removeButton);
+    }
+
+  function incrementQuantity(meat) {
+    const quantityElement = document.getElementById(`quantity_${meat}`);
+    const amountElement = document.getElementById(`amount_${meat}`);
+    const pricePerKg = parseFloat(amountElement.innerText) / parseInt(quantityElement.innerText, 10);
+
+    const currentQuantity = parseInt(quantityElement.innerText, 10);
+
+    quantityElement.innerText = currentQuantity + 1;
+    amountElement.innerText = (pricePerKg * (currentQuantity + 1)).toFixed(2);
+}
+
+
+
+    function toggleCart() {
+      const cart = document.querySelector('.cart');
+      cart.style.display = cart.style.display === 'none' ? 'block' : 'none';
+    }
+
+
+  </script>
+
+    <div class="footer2">
+      <div class="product">
+        <div class="heading">Products</div>
+        <div class="div">Sell your Products</div>
+        <div class="div">Advertise</div>
+        <div class="div">Pricing</div>
+        <div class="div">Product Buisness</div>
+
+      </div>
+      <div class="services">
+        <div class="heading">Services</div>
+        <div class="div">Return</div>
+        <div class="div">Cash Back</div>
+        <div class="div">Affiliate Marketing</div>
+        <div class="div">Others</div>
+      </div>
+      <div class="Company">
+        <div class="heading">Company</div>
+        <div class="div">Complaint</div>
+        <div class="div">Careers</div>
+        <div class="div">Affiliate Marketing</div>
+        <div class="div">Support</div>
+      </div>
+      <div class="Get Help">
+        <div class="heading">Get Help</div>
+        <div class="div">Help Center</div>
+        <div class="div">Privacy Policy</div>
+        <div class="div">Terms</div>
+        <div class="div">Login</div>
+      </div>
+    </div>
+   <div class="footer3">Copyright © <h4>ShoPperZ</h4> 2021-2028</div>
+  </footer>
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+  <script src="./ecommerce.js"></script>
+
+
+</body>
+</html>

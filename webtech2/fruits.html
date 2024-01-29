@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="C:\Users\sushm\OneDrive\Desktop\webtech2\home.css">
+  <link href=""C:\Users\sushm\OneDrive\Desktop\webtech2\home.css"" rel="stylesheet">
+
+  <title>Fruit Shop</title>
+
+
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    .vegetable-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      
+    }
+
+    .vegetable {
+      text-align: center;
+      margin: 15px;
+    }
+
+    img {
+      width: 150px;
+      height: 150px;
+      cursor: pointer;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin: 5px;
+    }
+
+    button {
+      background-color: #4caf50;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 5px;
+      display: none;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .options {
+      display: none;
+    }
+
+    .view-cart {
+      text-align: right;
+      margin-top: 20px;
+    }
+
+    .cart {
+      display: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+    .options {
+        display: none;
+      }
+      body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+
+.vegetable {
+  text-align: center;
+  margin: 15px;
+}
+
+#heading{
+  color: chartreuse;
+  font-size:large;
+  font-weight:bold;
+  font-size: 200px;
+}
+
+.fruit {
+  display: flex;
+  flex-direction: row; /* Updated to display items in a row */
+  justify-content: space-between;
+       /To space between the edge and to item/
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/Extra/
+.vegetable {
+  text-align: center;
+  margin: 15px;
+  width: calc(33.33% - 30px); /* 30px is the total margin (15px on each side) */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.vegetable-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row; /* Added this line to ensure horizontal alignment */
+}
+
+
+
+
+
+
+  </style>
+</head>
+<body>
+
+  <h1 id="heading">FRUITS </h1>
+  <header>
+    <div class="logo"><a href="#">ShoPperZ</a></div>
+        <div class="menu">
+      <a href="#">
+        <ion-icon name="close" class="close"></ion-icon>
+      </a>
+
+      <ul>
+        <li><a href="home1.html" class="under">HOME</a></li>
+        <li><a href="home.html" class="under">SHOP</a></li>
+        <li><a href="discount.html" class="under">OUR PRODUCTS</a></li>
+        <li><a href="contact.html" class="under">CONTACT US</a></li>
+        <li><a href="about_us.html" class="under">ABOUT US</a></li>
+      </ul>
+    </div>
+    <div class="search">
+
+      <a href=""><input type="text" placeholder="search products" id="input">
+        <ion-icon class="s" name="search"></ion-icon>
+      </a>
+    </div>
+    <div class="heading">
+      <ul>
+        <li><a href="home1.html" class="under">HOME</a></li>
+        <li><a href="home.html" class="under">SHOP</a></li>
+        <li><a href="discount.html" class="under">OUR PRODUCTS</a></li>
+        <li><a href="contact.html" class="under">CONTACT US</a></li>
+        <li><a href="about_us.html" class="under">ABOUT US</a></li>
+      </ul>
+    </div>
+    <div class="heading1">
+      <ion-icon name="menu" class="ham"></ion-icon>
+    </div>
+  </header>
+  <section class="fruit" >
+  
+  <div class="vegetable-container">
+<!-- Apple -->
+  <div class="vegetable" id="apple">
+    <img src="https://tse1.mm.bing.net/th?id=OIP.q3hhyPUuKnHFQB-AtIaRgwHaFj&pid=Api&P=0&h=180.jpg" alt="Apple" onclick="toggleOptions('apple')" />
+    <p>Apple</p>
+    <div id="allergy_info_apple" class="options">
+      <p>Allergy Info: None</p>
+    </div>
+    <button onclick="toggleAllergyInfo('apple')">Allergy Info</button>
+    <div id="nutritional_value_apple" class="options">
+      <p>Nutritional Value: High in Vitamin C</p>
+    </div>
+    <button onclick="toggleNutritionalValue('apple')">Nutritional Value</button>
+    <p>Price: $3.0 per kg</p>
+    <p id="quantity_label_apple" class="options">Quantity: <span id="quantity_apple">1</span></p>
+    <p id="amount_label_apple" class="options">Amount: $<span id="amount_apple">3.0</span></p>
+    <button onclick="incrementQuantity('apple')">+</button>
+    <button onclick="decrementQuantity('apple')">-</button>
+
+ 
+    <button onclick="addToCart('apple')">Add to Cart</button>
+  </div>
+
+  <!-- Mango -->
+  <div class="vegetable" id="mango">
+    <img src="https://tse4.mm.bing.net/th?id=OIP.DqxZw_1WZXavzC0rY7L2MgHaHa&pid=Api&P=0&h=180.jpg" alt="Mango" onclick="toggleOptions('mango')" />
+    <p>Mango</p>
+    <div id="allergy_info_mango" class="options">
+      <p>Allergy Info: oil present in the sap.</p>
+    </div>
+    <button onclick="toggleAllergyInfo('mango')">Allergy Info</button>
+    <div id="nutritional_value_mango" class="options">
+      <p>Nutritional Value: Rich in Vit C & A</p>
+    </div>
+    <button onclick="toggleNutritionalValue('mango')">Nutritional Value</button>
+    <p>Price: $4.0 per kg</p>
+    <p id="quantity_label_mango" class="options">Quantity: <span id="quantity_mango">1</span></p>
+    <p id="amount_label_mango" class="options">Amount: $<span id="amount_mango">4.0</span></p>
+    <button onclick="incrementQuantity('mango')">+</button>
+    <button onclick="decrementQuantity('mango')">-</button>
+    <button onclick="addToCart('mango')">Add to Cart</button>
+  </div>
+
+
+
+     <!--Orange--> <div class="vegetable" id="orange">
+        <img src="https://tse1.mm.bing.net/th?id=OIP.k1bcs4IVQF6QM2TSpfpw9QHaFi&pid=Api&P=0&h=180.jpg" alt="Orange" onclick="toggleOptions('orange')" />
+        <p>Orange</p>
+        <div id="allergy_info_orange" class="options">
+          <p>Allergy Info:Oral Allergy</p>
+        </div>
+        <button onclick="toggleAllergyInfo('orange')">Allergy Info</button>
+        <div id="nutritional_value_orange" class="options">
+          <p>Nutritional Value: High in Vit C</p>
+        </div>
+        <button onclick="toggleNutritionalValue('orange')">Nutritional Value</button>
+        <p>Price: $2.0 per kg</p>
+        <p id="quantity_label_orange" class="options">Quantity: <span id="quantity_orange">1</span></p>
+        <p id="amount_label_orange" class="options">Amount: $<span id="amount_orange">2.0</span></p>
+        <button onclick="incrementQuantity('orange')">+</button>
+        <button onclick="decrementQuantity('orange')">-</button>
+        <button onclick="addToCart('orange')">Add to Cart</button>
+      </div>
+      
+    <!-- Papaya -->
+<div class="vegetable" id="papaya">
+  <img src="https://tse2.mm.bing.net/th?id=OIP.pKRjPitn2iMbBvBsHudilgHaFj&pid=Api&P=0&h=180.jpg" alt="Papaya" onclick="toggleOptions('papaya')" />
+  <p>Papaya</p>
+  <div id="allergy_info_papaya" class="options">
+    <p>Allergy Info:Bad for pregnant women</p>
+  </div>
+  <button onclick="toggleAllergyInfo('papaya')">Allergy Info</button>
+  <div id="nutritional_value_papaya" class="options">
+    <p>Nutritional Value: Rich in Vit C,A&K </p>
+  </div>
+  <button onclick="toggleNutritionalValue('papaya')">Nutritional Value</button>
+  <p>Price: $3.5 per kg</p>
+  <p id="quantity_label_papaya" class="options">Quantity: <span id="quantity_papaya">1</span></p>
+  <p id="amount_label_papaya" class="options">Amount: $<span id="amount_papaya">3.5</span></p>
+  <button onclick="incrementQuantity('papaya')">+</button>
+  <button onclick="decrementQuantity('papaya')">-</button>
+  <button onclick="addToCart('papaya')">Add to Cart</button>
+</div>
+
+
+
+
+   
+
+      <!-- Banana -->
+<div class="vegetable" id="banana">
+  <img src="https://tse3.mm.bing.net/th?id=OIP.PL9psEL4DmSkBNPiNWcYmQAAAA&pid=Api&P=0&h=180.jpg" alt="Banana" onclick="toggleOptions('banana')" />
+  <p>Banana</p>
+  <div id="allergy_info_banana" class="options">
+    <p>Allergy Info: None</p>
+  </div>
+  <button onclick="toggleAllergyInfo('banana')">Allergy Info</button>
+  <div id="nutritional_value_banana" class="options">
+    <p>Nutritional Value: Rich in Potassium</p>
+  </div>
+  <button onclick="toggleNutritionalValue('banana')">Nutritional Value</button>
+  <p>Price: $1.5 per kg</p>
+  <p id="quantity_label_banana" class="options">Quantity: <span id="quantity_banana">1</span></p>
+  <p id="amount_label_banana" class="options">Amount: $<span id="amount_banana">1.5</span></p>
+  <button onclick="incrementQuantity('banana')">+</button>
+  <button onclick="decrementQuantity('banana')">-</button>
+  <button onclick="addToCart('banana')">Add to Cart</button>
+</div>
+      
+      <!--Grapes--><div class="vegetable" id="grapes">
+        <img src="https://tse4.mm.bing.net/th?id=OIP.D6ixoz9FRKG2ahV35UVw3gHaEo&pid=Api&P=0&h=180.jpg" alt="Grapes" onclick="toggleOptions('grapes')" />
+        <p>Grapes</p>
+        <div id="allergy_info_grapes" class="options">
+           <p>Allergy Info:Too much lead to diarrhea</p>
+        </div>
+        <button onclick="toggleAllergyInfo('grapes')">Allergy Info</button>
+        <div id="nutritional_value_grapes" class="options">
+          <p>Nutritional Value: Rich in Antioxidants</p>
+        </div>
+        <button onclick="toggleNutritionalValue('grapes')">Nutritional Value</button>
+        <p>Price: $3.0 per kg</p>
+        <p id="quantity_label_grapes" class="options">Quantity: <span id="quantity_grapes">1</span></p>
+        <p id="amount_label_grapes" class="options">Amount: $<span id="amount_grapes">3.0</span></p>
+        <button onclick="incrementQuantity('grapes')">+</button>
+        <button onclick="decrementQuantity('grapes')">-</button>
+        <button onclick="addToCart('grapes')">Add to Cart</button>
+      </div>
+
+     
+
+        <!--Custard apple--><div class="vegetable" id="custard_apple">
+          <img src="https://tse1.mm.bing.net/th?id=OIP.1IfV4BLV4MPLbcxKQ4MHhwHaE8&pid=Api&P=0&h=180.jpg" alt="Custard Apple" onclick="toggleOptions('custard_apple')" />
+          <p>Custard Apple</p>
+          <div id="allergy_info_custard_apple" class="options">
+            <p>Allergy Info:Gastrointestinal discomfort</p>
+          </div>
+          <button onclick="toggleAllergyInfo('custard_apple')">Allergy Info</button>
+          <div id="nutritional_value_custard_apple" class="options">
+            <p>Nutritional Value: Rich in VitC</p>
+             </div>
+          <button onclick="toggleNutritionalValue('custard_apple')">Nutritional Value</button>
+          <p>Price: $5.0 per kg</p>
+          <p id="quantity_label_custard_apple" class="options">Quantity: <span id="quantity_custard_apple">1</span></p>
+          <p id="amount_label_custard_apple" class="options">Amount: $<span id="amount_custard_apple">5.0</span></p>
+          <button onclick="incrementQuantity('custard_apple')">+</button>
+          <button onclick="decrementQuantity('custard_apple')">-</button>
+          <button onclick="addToCart('custard_apple')">Add to Cart</button>
+        </div>
+
+     
+      
+      <!-- Watermelon -->
+<div class="vegetable" id="watermelon">
+  <img src="https://tse2.mm.bing.net/th?id=OIP.TTnli8e1tn8mdzDWSgQbwQHaGe&pid=Api&P=0&h=180.jpg" alt="Watermelon" onclick="toggleOptions('watermelon')" />
+  <p>Watermelon</p>
+  <div id="allergy_info_watermelon" class="options">
+     <p>Allergy Info: None</p> 
+  </div>
+  <button onclick="toggleAllergyInfo('watermelon')">Allergy Info</button>
+  <div id="nutritional_value_watermelon" class="options">
+    <p>Nutritional Value: Rich in Fiber</p>
+  </div>
+  <button onclick="toggleNutritionalValue('watermelon')">Nutritional Value</button>
+  <p>Price: $5.0 per kg</p>
+  <p id="quantity_label_watermelon" class="options">Quantity: <span id="quantity_watermelon">1</span></p>
+  <p id="amount_label_watermelon" class="options">Amount: $<span id="amount_watermelon">5.0</span></p>
+  <button onclick="incrementQuantity('watermelon')">+</button>
+  <button onclick="decrementQuantity('watermelon')">-</button>
+  <button onclick="addToCart('watermelon')">Add to Cart</button>
+</div>
+
+
+
+
+        <!-- Strawberry -->
+<div class="vegetable" id="strawberry">
+  <img src="https://tse3.mm.bing.net/th?id=OIP.ESvtsBnYxWO40A061MtJoAHaEo&pid=Api&P=0&h=180.jpg" alt="Strawberry" onclick="toggleOptions('strawberry')" />
+  <p>Strawberry</p>
+  <div id="allergy_info_strawberry" class="options">
+     <p>Allergy Info:Oral allergy syndrome</p> 
+  </div>
+  <button onclick="toggleAllergyInfo('strawberry')">Allergy Info</button>
+  <div id="nutritional_value_strawberry" class="options">
+    <p>Nutritional Value: Rich in Vitamin C</p>
+  </div>
+  <button onclick="toggleNutritionalValue('strawberry')">Nutritional Value</button>
+  <p>Price: $3.5 per kg</p>
+  <p id="quantity_label_strawberry" class="options">Quantity: <span id="quantity_strawberry">1</span></p>
+  <p id="amount_label_strawberry" class="options">Amount: $<span id="amount_strawberry">3.5</span></p>
+  <button onclick="incrementQuantity('strawberry')">+</button>
+  <button onclick="decrementQuantity('strawberry')">-</button>
+  <button onclick="addToCart('strawberry')">Add to Cart</button>
+</div>
+
+<!-- Pomegranate -->
+<div class="vegetable" id="pomegranate">
+  <img src="https://tse2.mm.bing.net/th?id=OIP.b7VuOiqi7yny8RHt7vtm_wHaFc&pid=Api&P=0&h=180.jpg" alt="Pomegranate" onclick="toggleOptions('pomegranate')" />
+  <p>Pomegranate</p>
+  <div id="allergy_info_pomegranate" class="options">
+    <!-- <p>Allergy Info: None</p> -->
+  </div>
+  <button onclick="toggleAllergyInfo('pomegranate')">Allergy Info</button>
+  <div id="nutritional_value_pomegranate" class="options">
+   <p>Nutritional Value: Rich in Antioxidants</p>
+  </div>
+  <button onclick="toggleNutritionalValue('pomegranate')">Nutritional Value</button>
+  <p>Price: $4.0 per kg</p>
+  <p id="quantity_label_pomegranate" class="options">Quantity: <span id="quantity_pomegranate">1</span></p>
+  <p id="amount_label_pomegranate" class="options">Amount: $<span id="amount_pomegranate">4.0</span></p>
+  <button onclick="incrementQuantity('pomegranate')">+</button>
+  <button onclick="decrementQuantity('pomogranate')">-</button>
+  <button onclick="addToCart('pomegranate')">Add to Cart</button>
+</div>
+
+<!-- Pineapple -->
+<div class="vegetable" id="pineapple">
+  <img src="https://tse2.mm.bing.net/th?id=OIP.CFKhhkExspn5-L7_W4UG4wHaE8&pid=Api&P=0&h=180.jpg" alt="Pineapple" onclick="toggleOptions('pineapple')" />
+  <p>Pineapple</p>
+  <div id="allergy_info_pineapple" class="options">
+    <p>Allergy Info:Bad for Pregnancy</p>
+  </div>
+  <button onclick="toggleAllergyInfo('pineapple')">Allergy Info</button>
+  <div id="nutritional_value_pineapple" class="options">
+    <p>Nutritional Value: Rich in Vitamin C</p>
+  </div>
+  <button onclick="toggleNutritionalValue('pineapple')">Nutritional Value</button>
+  <p>Price: $2.5 per kg</p>
+  <p id="quantity_label_pineapple" class="options">Quantity: <span id="quantity_pineapple">1</span></p>
+  <p id="amount_label_pineapple" class="options">Amount: $<span id="amount_pineapple">2.5</span></p>
+  <button onclick="incrementQuantity('pineapple')">+</button>
+  <button onclick="decrementQuantity('pineapple')">-</button>
+  <button onclick="addToCart('pineapple')">Add to Cart</button>
+</div>
+
+
+<!-- Litchi -->
+<div class="vegetable" id="litchi">
+  <img src="https://tse4.mm.bing.net/th?id=OIP.uWu5tTqZg7IaOlLrxbngWwHaE8&pid=Api&P=0&h=180.jpg" alt="Litchi" onclick="toggleOptions('litchi')" />
+  <p>Litchi</p>
+  <div id="allergy_info_litchi" class="options">
+     <p>Allergy Info:Hypoglycemia</p>
+  </div>
+  <button onclick="toggleAllergyInfo('litchi')">Allergy Info</button>
+  <div id="nutritional_value_litchi" class="options">
+   <p>Nutritional Value: Rich in Vitamin C</p>
+  </div>
+  <button onclick="toggleNutritionalValue('litchi')">Nutritional Value</button>
+  <p>Price: $5.0 per kg</p>
+  <p id="quantity_label_litchi" class="options">Quantity: <span id="quantity_litchi">1</span></p>
+  <p id="amount_label_litchi" class="options">Amount: $<span id="amount_litchi">5.0</span></p>
+  <button onclick="incrementQuantity('litchi')">+</button>
+  <button onclick="decrementQuantity('litchi')">-</button>
+  <button onclick="addToCart('litchi')">Add to Cart</button>
+</div>
+
+<!-- Moosambi -->
+<div class="vegetable" id="moosambi">
+  <img src="https://tse1.mm.bing.net/th?id=OIP.5liOFXCDoVjDHNKuY085zQHaE8&pid=Api&P=0&h=180.jpg" alt="Moosambi" onclick="toggleOptions('moosambi')" />
+  <p>Moosambi</p>
+  <div id="allergy_info_moosambi" class="options">
+     <p>Allergy Info: None</p>
+  </div>
+  <button onclick="toggleAllergyInfo('moosambi')">Allergy Info</button>
+  <div id="nutritional_value_moosambi" class="options">
+   <p>Nutritional Value: Rich in Vitamin C</p>
+  </div>
+  <button onclick="toggleNutritionalValue('moosambi')">Nutritional Value</button>
+  <p>Price: $2.5 per kg</p>
+  <p id="quantity_label_moosambi" class="options">Quantity: <span id="quantity_moosambi">1</span></p>
+  <p id="amount_label_moosambi" class="options">Amount: $<span id="amount_moosambi">2.5</span></p>
+  <button onclick="incrementQuantity('moosambi')">+</button>
+  <button onclick="decrementQuantity('moosambi')">-</button>
+  <button onclick="addToCart('moosambi')">Add to Cart</button>
+</div>
+
+<!-- Kiwi -->
+<div class="vegetable" id="kiwi">
+  <img src="https://tse2.mm.bing.net/th?id=OIP.fN7JMjv4uuG15PeqFF4kWwHaFX&pid=Api&P=0&h=180.jpg" alt="Kiwi" onclick="toggleOptions('kiwi')" />
+  <p>Kiwi</p>
+  <div id="allergy_info_kiwi" class="options">
+    <!-- <p>Allergy Info: None</p> -->
+  </div>
+  <button onclick="toggleAllergyInfo('kiwi')">Allergy Info</button>
+  <div id="nutritional_value_kiwi" class="options">
+    <p>Nutritional Value:Vit C, good for dengiue</p>
+  </div>
+  <button onclick="toggleNutritionalValue('kiwi')">Nutritional Value</button>
+  <p>Price: $6.0 per kg</p>
+  <p id="quantity_label_kiwi" class="options">Quantity: <span id="quantity_kiwi">1</span></p>
+  <p id="amount_label_kiwi" class="options">Amount: $<span id="amount_kiwi">6.0</span></p>
+  <button onclick="incrementQuantity('kiwi')">+</button>
+  <button onclick="decrementQuantity('kiwi')">-</button>
+  <button onclick="addToCart('kiwi')">Add to Cart</button>
+</div>
+
+
+
+<!-- Coconut -->
+<div class="vegetable" id="coconut">
+  <img src="https://tse3.mm.bing.net/th?id=OIP.2wKkUiA5s8cFg_iw34Cp1wHaEK&pid=Api&P=0&h=180.jpg" alt="Coconut" onclick="toggleOptions('coconut')" />
+  <p>Coconut</p>
+  <div id="allergy_info_coconut" class="options">
+    <p>Allergy Info: None</p>
+  </div>
+  <button onclick="toggleAllergyInfo('coconut')">Allergy Info</button>
+  <div id="nutritional_value_coconut" class="options">
+    <p>Nutritional Value: Rich in Healthy Fats</p>
+  </div>
+  <button onclick="toggleNutritionalValue('coconut')">Nutritional Value</button>
+  <p>Price: $5.0 per unit</p>
+  <p id="quantity_label_coconut" class="options">Quantity: <span id="quantity_coconut">1</span></p>
+  <p id="amount_label_coconut" class="options">Amount: $<span id="amount_coconut">5.0</span></p>
+  <button onclick="incrementQuantity('coconut')">+</button>
+  <button onclick="decrementQuantity('coconut')">-</button>
+  <button onclick="addToCart('coconut')">Add to Cart</button>
+</div>
+
+
+
+    <!-- Add more vegetables here -->
+
+  </div>
+  </section>
+
+  <div class="view-cart">
+    <a href="#" onclick="toggleCart()">View Cart</a>
+  </div>
+
+  <div class="cart">
+    <h2>Shopping Cart</h2>
+    <div id="cart-message"></div>
+    <ul id="cart-list"></ul>
+  </div>
+
+  <script>
+    function toggleOptions(vegetable) {
+      const options = document.querySelectorAll(`#${vegetable} .options, #${vegetable} button`);
+      options.forEach(option => option.style.display = option.style.display === 'none' ? 'block' : 'none');
+    }
+
+    function toggleNutritionalValue(vegetable) {
+        const nutritionalValueElement = document.getElementById(`nutritional_value_${vegetable}`);
+        const allergyInfoElement = document.getElementById(`allergy_info_${vegetable}`);
+      
+        // Set the nutritional information based on the vegetable
+        let nutritionalInfo = '';
+      
+        // Add more cases for other vegetables as needed
+        switch (vegetable) {
+          case 'carrot':
+            nutritionalInfo = 'High in Vitamin A, low in calories and a good source of fiber.';
+            break;
+          // Add more cases for other vegetables here
+      
+          default:
+            nutritionalInfo = 'Nutritional information not available.';
+        }
+      
+        nutritionalValueElement.innerHTML = `<p>Nutritional Value: ${nutritionalInfo}</p>`;
+      
+        nutritionalValueElement.style.display = 'block';
+        allergyInfoElement.style.display = 'none';
+      }
+      
+
+    function toggleNutritionalValue(vegetable) {
+      const nutritionalValueElement = document.getElementById(`nutritional_value_${vegetable}`);
+      const allergyInfoElement = document.getElementById(`allergy_info_${vegetable}`);
+
+      nutritionalValueElement.style.display = 'block';
+      allergyInfoElement.style.display = 'none';
+    }
+
+        function addToCart(vegetable) {
+      const quantityElement = document.getElementById(`quantity_${vegetable}`);
+      const amountElement = document.getElementById(`amount_${vegetable}`);
+      const currentQuantity = parseInt(quantityElement.innerText, 10);
+      const currentAmount = parseFloat(amountElement.innerText);
+
+      const cartList = document.getElementById('cart-list');
+      const listItem = document.createElement('li');
+      listItem.innerText = `${vegetable} - Quantity: ${currentQuantity}, Amount: $${currentAmount.toFixed(2)}`;
+
+      cartList.appendChild(listItem);
+      document.getElementById('cart-message').innerText = `${vegetable} added to cart.`;
+
+      // Show remove button
+      const removeButton = document.createElement('button');
+      removeButton.innerText = 'Remove';
+      removeButton.onclick = function () {
+        listItem.remove();
+        document.getElementById('cart-message').innerText = `${vegetable} removed from cart.`;
+        removeButton.remove(); // Remove the button after removal
+      };
+      listItem.appendChild(removeButton);
+    }
+
+ 
+
+
+  function incrementQuantity(vegetable) {
+    const quantityElement = document.getElementById(`quantity_${vegetable}`);
+    const amountElement = document.getElementById(`amount_${vegetable}`);
+    const pricePerKg = parseFloat(amountElement.innerText) / parseInt(quantityElement.innerText, 10);
+
+    const currentQuantity = parseInt(quantityElement.innerText, 10);
+
+    quantityElement.innerText = currentQuantity + 1;
+    amountElement.innerText = (pricePerKg * (currentQuantity + 1)).toFixed(2);
+}
+
+  function decrementQuantity(vegetable) {
+    const quantityElement = document.getElementById(`quantity_${vegetable}`);
+    const amountElement = document.getElementById(`amount_${vegetable}`);
+    const pricePerKg = parseFloat(amountElement.innerText) / parseInt(quantityElement.innerText, 10);
+
+    const currentQuantity = parseInt(quantityElement.innerText, 10);
+
+    quantityElement.innerText = currentQuantity -1;
+    amountElement.innerText = (pricePerKg * (currentQuantity -1)).toFixed(2);
+}
+
+/*
+
+    function decrementQuantity(vegetable) {
+      const quantityElement = document.getElementById(`quantity_${vegetable}`);
+      const amountElement = document.getElementById(`amount_${vegetable}`);
+      const currentQuantity = parseInt(quantityElement.innerText, 10);
+      const currentAmount = parseFloat(amountElement.innerText);
+
+      quantityElement.innerText = currentQuantity - 1;
+      amountElement.innerText = (currentAmount - 2.5).toFixed(2);
+    }
+*/
+    function toggleCart() {
+      const cart = document.querySelector('.cart');
+      cart.style.display = cart.style.display === 'none' ? 'block' : 'none';
+    }
+
+
+    function toggleAllergyInfo(vegetable) {
+    const nutritionalValueElement = document.getElementById(`nutritional_value_${vegetable}`);
+    const allergyInfoElement = document.getElementById(`allergy_info_${vegetable}`);
+
+    nutritionalValueElement.style.display = 'none';
+
+    if (allergyInfoElement.innerHTML.trim() !== '') {
+        // If allergy information is available, display it
+        allergyInfoElement.style.display = 'block';
+    } else {
+        // If no allergy information is available, display a default message
+        allergyInfoElement.innerHTML = '<p>Allergy Info: Not available.</p>';
+        allergyInfoElement.style.display = 'block';
+    }
+}
+
+  </script>
+
+    <div class="footer2">
+      <div class="product">
+        <div class="heading">Products</div>
+        <div class="div">Sell your Products</div>
+        <div class="div">Advertise</div>
+        <div class="div">Pricing</div>
+        <div class="div">Product Buisness</div>
+
+      </div>
+      <div class="services">
+        <div class="heading">Services</div>
+        <div class="div">Return</div>
+        <div class="div">Cash Back</div>
+        <div class="div">Affiliate Marketing</div>
+        <div class="div">Others</div>
+      </div>
+      <div class="Company">
+        <div class="heading">Company</div>
+        <div class="div">Complaint</div>
+        <div class="div">Careers</div>
+        <div class="div">Affiliate Marketing</div>
+        <div class="div">Support</div>
+      </div>
+      <div class="Get Help">
+        <div class="heading">Get Help</div>
+        <div class="div">Help Center</div>
+        <div class="div">Privacy Policy</div>
+        <div class="div">Terms</div>
+        <div class="div">Login</div>
+      </div>
+    </div>
+   <div class="footer3">Copyright © <h4>ShoPperZ</h4> 2021-2028</div>
+  </footer>
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+  <script src="./ecommerce.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="C:\Users\sushm\OneDrive\Desktop\webtech2\home.css">
+ 
+
+  <title>Home Page</title>
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+
+<body>
+
+ 
+  <br>
+  <br>
+  <header>
+    <div class="logo"><a href="#">ShoPperZ</a></div>
+    <div class="menu">
+      <a href="about_us.html">
+        <ion-icon name="close" class="close"></ion-icon>
+      </a>
+
+      <ul>
+        <li><a href="home1.html" class="under">HOME</a></li>
+        <li><a href="home.html" class="under">SHOP</a></li>
+        <li><a href="discount.html" class="under">OUR PRODUCTS</a></li>
+        <li><a href="contact.html" class="under">CONTACT US</a></li>
+        <li><a href="about_us.html" class="under">ABOUT US</a></li>
+      </ul>
+    </div>
+    <div class="search">
+
+      <a href="about_us.html"><input type="text" placeholder="search products" id="input">
+        <ion-icon class="s" name="search"></ion-icon>
+      </a>
+    </div>
+    <div class="heading">
+      <ul>
+        <li><a href="home1.html" class="under">HOME</a></li>
+        <li><a href="home.html" class="under">SHOP</a></li>
+        <li><a href="discount.html" class="under">OUR PRODUCTS</a></li>
+        <li><a href="contact.html" class="under">CONTACT US</a></li>
+        <li><a href="about_us.html" class="under">ABOUT US</a></li>
+      </ul>
+    </div>
+    <div class="heading1">
+      <ion-icon name="menu" class="ham"></ion-icon>
+    </div>
+  </header>
+
+  <div class="heading1">
+    <ion-icon name="menu" class="ham"></ion-icon>
+  </div>
+</header>
+<section>
+  <div class="section">
+    <div class="section1">
+      <div class="img-slider">
+        <img src="https://static.libertyprim.com/files/familles/pomme-large.jpg?1569271834" alt="" class="img">
+        <img src="https://images.pexels.com/photos/3962294/pexels-photo-3962294.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="" class="img">
+        <img src="https://images.pexels.com/photos/2292953/pexels-photo-2292953.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="" class="img">
+        <img src="https://cdn.pixabay.com/photo/2015/03/30/12/43/bananas-698608_640.jpg" alt="" class="img">
+        <img src="https://cdn.pixabay.com/photo/2017/08/09/18/56/shopping-2615482_640.jpg" alt="" class="img">
+      
+
+    </div>
+    <div class="section2">
+      <div class="container">
+        <div class="items">
+          <div class="img img1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6DYarR2JAH2ZVnb5z8MliTNc9OCk_nTPmMcs7fosJZbtuYL-4MmvO2zGv2JeEoR_kGS0&usqp=CAU" alt=""></div>
+          <div class="name">LETTUSE</div>
+          <div class="price">$5</div>
+          <div class="info">vitamin C, iron, and calcium.</div>
+          <p id="quantity_label_lettuce" class="options">Quantity: <span id="quantity_lettuce">1</span></p>
+          <p id="amount_label_lettuce" class="options">Amount: $<span id="amount_lettuce">5</span></p>
+          <button onclick="incrementQuantity('lettuce')">+</button>
+          <button onclick="decrementQuantity('lettuce')">-</button>
+          <button onclick="addToCart('lettuce')">Add to Cart</button>
+        </div>
+
+
+
+     
+        <div class="items">
+          <div class="img img2"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJUNl-9j80AojdohV7uYcDDuauvFuCFbjDlQ&usqp=CAU" alt=""></div>
+          <div class="name">KETCHUP</div>
+          <div class="price">$6.34</div>
+          <div class="info">tomato ketchup </div>
+       
+        <p id="quantity_label_ketchup" class="options">Quantity: <span id="quantity_ketchup">1</span></p>
+  <p id="amount_label_ketchup" class="options">Amount: $<span id="amount_ketchup">6.34</span></p>
+  <button onclick="incrementQuantity('ketchup')">+</button>
+  <button onclick="decrementQuantity('ketchup')">-</button>
+  <button onclick="addToCart('ketchup')">Add to Cart</button>
+</div>
+
+
+
+        <div class="items">
+          <div class="img img3"><img src="https://i.cbc.ca/1.1894364.1380814651!/fileImage/httpImage/sugar.jpg" alt=""></div>
+          <div class="name">Sugar</div>
+          <div class="price">$9</div>
+          <div class="info">Carbohydrate</div>
+       
+        <p id="quantity_label_sugar" class="options">Quantity: <span id="quantity_sugar">1</span></p>
+        <p id="amount_label_sugar" class="options">Amount: $<span id="amount_sugar">9</span></p>
+        <button onclick="incrementQuantity('sugar')">+</button>
+        <button onclick="decrementQuantity('sugar')">-</button>
+        <button onclick="addToCart('sugar')">Add to Cart</button>
+      </div>
+
+
+
+
+
+
+        <div class="items">
+          <div class="img img1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjPiG2rNxZ8aVOo_06i8tAGwuTkJC0Gn-ZoA&usqp=CAU" alt=""></div>
+          <div class="name">VENNILA ESSENCE</div>
+          <div class="price">$9.1</div>
+          <div class="info">Pure venilla seed</div>
+        
+        <p id="quantity_label_vanila" class="options">Quantity: <span id="quantity_vanila">1</span></p>
+        <p id="amount_label_vanila" class="options">Amount: $<span id="amount_vanila">9.1</span></p>
+        <button onclick="incrementQuantity('vanila')">+</button>
+        <button onclick="decrementQuantity('vanila')">-</button>
+        <button onclick="addToCart('vanila')">Add to Cart</button>
+      </div>
+
+
+
+
+
+
+        <div class="items">
+          <div class="img img1"><img src="https://www.netmeds.com/images/cms/wysiwyg/blog/Post/2018/11/black_pepper_898.jpg" alt=""></div>
+          <div class="name">PEPPER</div>
+          <div class="price">$20</div>
+          <div class="info">Black pepper.</div>
+      
+        <p id="quantity_label_pepper" class="options">Quantity: <span id="quantity_pepper">1</span></p>
+  <p id="amount_label_pepper" class="options">Amount: $<span id="amount_pepper">20</span></p>
+  <button onclick="incrementQuantity('pepper')">+</button>
+  <button onclick="decrementQuantity('pepper')">-</button>
+  <button onclick="addToCart('pepper')">Add to Cart</button>
+</div>
+
+
+ 
+
+
+
+
+        <div class="items">
+          <div class="img img1"><img src="https://m.media-amazon.com/images/I/819AMnNfdPL.jpg" alt=""></div>
+          <div class="name">PISTA</div>
+          <div class="price">$18</div>
+          <div class="info">NUTS.</div>
+      
+        <p id="quantity_label_pista" class="options">Quantity: <span id="quantity_pista">1</span></p>
+  <p id="amount_label_pista" class="options">Amount: $<span id="amount_pista">18</span></p>
+  <button onclick="incrementQuantity('pista')">+</button>
+  <button onclick="decrementQuantity('pista')">-</button>
+  <button onclick="addToCart('pista')">Add to Cart</button>
+</div>
+
+
+
+
+
+
+
+
+        <div class="items">
+          <div class="img img1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjV2sf2ABIBzowGOSb9ba2x7E-cFG4EOUh5w&usqp=CAU" alt=""></div>
+          <div class="name">CHEESE</div>
+          <div class="price">$6.7</div>
+          <div class="info">Dairy product.</div>
+    
+
+<p id="quantity_label_cheese" class="options">Quantity: <span id="quantity_cheese">1</span></p>
+  <p id="amount_label_cheese" class="options">Amount: $<span id="amount_cheese">6.7</span></p>
+  <button onclick="incrementQuantity('cheese')">+</button>
+  <button onclick="decrementQuantity('cheese')">-</button>
+  <button onclick="addToCart('cheese')">Add to Cart</button>
+</div>
+
+
+
+
+
+        <div class="items">
+          <div class="img img1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfxUqekzbU7tYoTm7yKNSlUQ57-RAL4SrOug&usqp=CAU" alt=""></div>
+          <div class="name">OAT</div>
+          <div class="price">$10</div>
+          <div class="info">Preferred for diets.</div>
+     
+        <p id="quantity_label_oat" class="options">Quantity: <span id="quantity_oat">1</span></p>
+  <p id="amount_label_oat" class="options">Amount: $<span id="amount_oat">10</span></p>
+  <button onclick="incrementQuantity('oat')">+</button>
+  <button onclick="decrementQuantity('oat')">-</button>
+  <button onclick="addToCart('oat')">Add to Cart</button>
+</div>
+
+
+
+         <div class="items">
+          <div class="img img1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6q-jN1_irt8Rm5k66jz-tfivqiU2bUUovtg&usqp=CAU" alt=""></div>
+          <div class="name">Egg</div>
+          <div class="price">$1</div>
+          <div class="info">Fresh from farm.</div>
+    
+        <p id="quantity_label_egg" class="options">Quantity: <span id="quantity_egg">1</span></p>
+        <p id="amount_label_egg" class="options">Amount: $<span id="amount_egg">1</span></p>
+        <button onclick="incrementQuantity('egg')">+</button>
+        <button onclick="decrementQuantity('egg')">-</button>
+        <button onclick="addToCart('egg')">Add to Cart</button>
+      </div>
+
+
+
+
+
+
+
+
+        <div class="items">
+          <div class="img img1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTT2W0v8LvBcr7WWKEhxPz-PW5PD06NaqZqLA&usqp=CAU" alt=""></div>
+          <div class="name">COCOCOLA</div>
+          <div class="price">$2</div>
+          <div class="info">Cooldrinks.</div>
+        
+        <p id="quantity_label_cocacola" class="options">Quantity: <span id="quantity_cocacola">1</span></p>
+  <p id="amount_label_cocacola" class="options">Amount: $<span id="amount_cocacola">2</span></p>
+  <button onclick="incrementQuantity('cocacola')">+</button>
+  <button onclick="decrementQuantity('cocacola')">-</button>
+  <button onclick="addToCart('cocacola')">Add to Cart</button>
+</div>
+
+
+
+
+
+
+
+
+
+
+        <div class="items">
+          <div class="img img1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8ggGSgkuKlbIT8Sf-dx7pugTC-HddD58B5Q&usqp=CAU" alt=""></div>
+          <div class="name">POTATO</div>
+          <div class="price">$5</div>
+          <div class="info">Rich in carbohydrates</div>
+
+        <p id="quantity_label_potato" class="options">Quantity: <span id="quantity_potato">1</span></p>
+  <p id="amount_label_potato" class="options">Amount: $<span id="amount_potato">5</span></p>
+  <button onclick="incrementQuantity('potato')">+</button>
+  <button onclick="decrementQuantity('potato')">-</button>
+  <button onclick="addToCart('potato')">Add to Cart</button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="items">
+          <div class="img img1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBj1j7YqDTWhMcSvUywZcit774Oz2anwQTaw&usqp=CAU" alt=""></div>
+          <div class="name">CHIPS</div>
+          <div class="price">$0.5</div>
+          <div class="info">Lays.</div>
+        <p id="quantity_label_chips" class="options">Quantity: <span id="quantity_chips">1</span></p>
+  <p id="amount_label_chips" class="options">Amount: $<span id="amount_chips">0.5</span></p>
+  <button onclick="incrementQuantity('chips')">+</button>
+  <button onclick="decrementQuantity('chips')">-</button>
+  <button onclick="addToCart('chips')">Add to Cart</button>
+</div>
+
+
+
+
+
+
+
+
+
+        <div class="items">
+          <div class="img img1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRk6LM1Dusu_yYe5z-5lAfDML7AkqzHOGxxYQ&usqp=CAU" alt=""></div>
+          <div class="name">CORN</div>
+          <div class="price">$3</div>
+          <div class="info">Sweet corn.</div>
+          <p id="quantity_label_corn" class="options">Quantity: <span id="quantity_corn">1</span></p>
+          <p id="amount_label_corn" class="options">Amount: $<span id="amount_corn">3</span></p>
+          <button onclick="incrementQuantity('corn')">+</button>
+          <button onclick="decrementQuantity('corn')">-</button>
+          <button onclick="addToCart('corn')">Add to Cart</button>
+  
+
+
+
+
+
+
+
+
+        </div>
+        <div class="items">
+          <div class="img img1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQq5UVA3NL594s3jhhU71SSRTSviK84E1mhiA&usqp=CAU" alt=""></div>
+          <div class="name">BEANS</div>
+          <div class="price">$7</div>
+          <div class="info">French beans.</div>
+          <p id="quantity_label_beans" class="options">Quantity: <span id="quantity_beans">1</span></p>
+  <p id="amount_label_beans" class="options">Amount: $<span id="amount_beans">7</span></p>
+  <button onclick="incrementQuantity('beans')">+</button>
+  <button onclick="decrementQuantity('beans')">-</button>
+  <button onclick="addToCart('beans')">Add to Cart</button>
+</div>
+
+
+
+
+
+
+
+        
+        <div class="items">
+          <div class="img img1"><img src="https://media.post.rvohealth.io/wp-content/uploads/2020/09/AN445-Dragonfruit-732x549-thumb-732x549.jpg" alt=""></div>
+          <div class="name">DRAGON FRUIT</div>
+          <div class="price">$5</div>
+          <div class="info">low in calories and high in fiber and antioxidants</div>
+       
+        <p id="quantity_label_dragon_fruit" class="options">Quantity: <span id="quantity_dragon_fruit">1</span></p>
+  <p id="amount_label_dragon_fruit" class="options">Amount: $<span id="amount_dragon_fruit">5</span></p>
+  <button onclick="incrementQuantity('dragon_fruit')">+</button>
+  <button onclick="decrementQuantity('dragon_fruit')">-</button>
+  <button onclick="addToCart('dragon_fruit')">Add to Cart</button>
+</div>
+
+
+
+
+
+
+        <div class="items">
+          <div class="img img1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQG-WJb38EfWszJDCcIAB7aAN3_hWeBdqo13g&usqp=CAU" alt=""></div>
+          <div class="name">RESIN</div>
+          <div class="price">$3</div>
+          <div class="info">Dry fruits</div>
+       
+        <p id="quantity_label_resin" class="options">Quantity: <span id="quantity_resin">1</span></p>
+  <p id="amount_label_resin" class="options">Amount: $<span id="amount_resin">3</span></p>
+  <button onclick="incrementQuantity('resin')">+</button>
+  <button onclick="decrementQuantity('resin')">-</button>
+  <button onclick="addToCart('resin')">Add to Cart</button>
+</div>
+
+
+
+
+
+
+
+
+
+        <div class="items">
+          <div class="img img1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1DKvGLA4DAG-asCa4kEWEEmxqWSRzzW5cmQ&usqp=CAU" alt=""></div>
+          <div class="name">MILK</div>
+          <div class="price">$1.6</div>
+          <div class="info">Pasturized milk.</div>
+    
+        <p id="quantity_label_milk" class="options">Quantity: <span id="quantity_milk">1</span></p>
+  <p id="amount_label_milk" class="options">Amount: $<span id="amount_milk">1.6</span></p>
+  <button onclick="incrementQuantity('milk')">+</button>
+  <button onclick="decrementQuantity('milk')">-</button>
+  <button onclick="addToCart('milk')">Add to Cart</button>
+</div>
+
+
+
+
+
+
+
+
+        <div class="items">
+          <div class="img img1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlrCSOdyBY1cDUztGUvn-MKKdw6u45Tvk_jA&usqp=CAU alt=""></div>
+          <div class="name">CARROT</div>
+          <div class="price">$56</div>
+          <div class="info"></div>
+         
+          <p id="quantity_label_carrot" class="options">Quantity: <span id="quantity_carrot">1</span></p>
+  <p id="amount_label_carrot" class="options">Amount: $<span id="amount_carrot">56</span></p>
+  <button onclick="incrementQuantity('carrot')">+</button>
+  <button onclick="decrementQuantity('carrot')">-</button>
+  <button onclick="addToCart('carrot')">Add to Cart</button>
+</div>
+
+
+
+
+
+
+     
+     
+  </div>
+
+</section>
+
+</script>
+
+
+
+
+
+
+<div class="view-cart">
+    <a href="#" onclick="toggleCart()">View Cart</a>
+  </div>
+
+  <div class="cart">
+    <h2>Shopping Cart</h2>
+    <div id="cart-message"></div>
+    <ul id="cart-list"></ul>
+  </div>
+
+  <script>
+    function toggleOptions(vegetable) {
+      const options = document.querySelectorAll(`#${vegetable} .options, #${vegetable} button`);
+      options.forEach(option => option.style.display = option.style.display === 'none' ? 'block' : 'none');
+    }
+
+    function toggleNutritionalValue(vegetable) {
+        const nutritionalValueElement = document.getElementById(`nutritional_value_${vegetable}`);
+        const allergyInfoElement = document.getElementById(`allergy_info_${vegetable}`);
+      
+        // Set the nutritional information based on the vegetable
+        let nutritionalInfo = '';
+      
+        // Add more cases for other vegetables as needed
+        switch (vegetable) {
+          case 'carrot':
+            nutritionalInfo = 'High in Vitamin A, low in calories and a good source of fiber.';
+            break;
+          // Add more cases for other vegetables here
+      
+          default:
+            nutritionalInfo = 'Nutritional information not available.';
+        }
+      
+        nutritionalValueElement.innerHTML = `<p>Nutritional Value: ${nutritionalInfo}</p>`;
+      
+        nutritionalValueElement.style.display = 'block';
+        allergyInfoElement.style.display = 'none';
+      }
+      
+
+    function toggleNutritionalValue(vegetable) {
+      const nutritionalValueElement = document.getElementById(`nutritional_value_${vegetable}`);
+      const allergyInfoElement = document.getElementById(`allergy_info_${vegetable}`);
+
+      nutritionalValueElement.style.display = 'block';
+      allergyInfoElement.style.display = 'none';
+    }
+
+    function addToCart(vegetable) {
+      const quantityElement = document.getElementById(`quantity_${vegetable}`);
+      const amountElement = document.getElementById(`amount_${vegetable}`);
+      const currentQuantity = parseInt(quantityElement.innerText, 10);
+      const currentAmount = parseFloat(amountElement.innerText);
+
+      const cartList = document.getElementById('cart-list');
+      const listItem = document.createElement('li');
+      listItem.innerText = `${vegetable} - Quantity: ${currentQuantity}, Amount: $${currentAmount.toFixed(2)}`;
+
+      cartList.appendChild(listItem);
+      document.getElementById('cart-message').innerText = `${vegetable} added to cart.`;
+
+      // Show remove button
+      const removeButton = document.createElement('button');
+      removeButton.innerText = 'Remove';
+      removeButton.onclick = function () {
+        listItem.remove();
+        document.getElementById('cart-message').innerText = `${vegetable} removed from cart.`;
+        removeButton.remove(); // Remove the button after removal
+      };
+      listItem.appendChild(removeButton);
+    }
+
+ function incrementQuantity(vegetable) {
+    const quantityElement = document.getElementById(`quantity_${vegetable}`);
+    const amountElement = document.getElementById(`amount_${vegetable}`);
+    const pricePerKg = parseFloat(amountElement.innerText) / parseInt(quantityElement.innerText, 10);
+
+    const currentQuantity = parseInt(quantityElement.innerText, 10);
+
+    quantityElement.innerText = currentQuantity + 1;
+    amountElement.innerText = (pricePerKg * (currentQuantity + 1)).toFixed(2);
+}
+
+  function decrementQuantity(vegetable) {
+    const quantityElement = document.getElementById(`quantity_${vegetable}`);
+    const amountElement = document.getElementById(`amount_${vegetable}`);
+    const pricePerKg = parseFloat(amountElement.innerText) / parseInt(quantityElement.innerText, 10);
+
+    const currentQuantity = parseInt(quantityElement.innerText, 10);
+
+    quantityElement.innerText = currentQuantity -1;
+    amountElement.innerText = (pricePerKg * (currentQuantity -1)).toFixed(2);
+}
+    function toggleCart() {
+      const cart = document.querySelector('.cart');
+      cart.style.display = cart.style.display === 'none' ? 'block' : 'none';
+    }
+
+
+    function toggleAllergyInfo(vegetable) {
+    const nutritionalValueElement = document.getElementById(`nutritional_value_${vegetable}`);
+    const allergyInfoElement = document.getElementById(`allergy_info_${vegetable}`);
+
+    nutritionalValueElement.style.display = 'none';
+
+    if (allergyInfoElement.innerHTML.trim() !== '') {
+        // If allergy information is available, display it
+        allergyInfoElement.style.display = 'block';
+    } else {
+        // If no allergy information is available, display a default message
+        allergyInfoElement.innerHTML = '<p>Allergy Info: Not available.</p>';
+        allergyInfoElement.style.display = 'block';
+    }
+}
+
+  </script>
+
+<div class="footer2">
+  <div class="product">
+    <div class="heading">Products</div>
+    <div class="div">Sell your Products</div>
+    <div class="div">Advertise</div>
+    <div class="div">Pricing</div>
+    <div class="div">Product Buisness</div>
+
+  </div>
+  <div class="services">
+    <div class="heading">Services</div>
+    <div class="div">Return</div>
+    <div class="div">Cash Back</div>
+    <div class="div">Affiliate Marketing</div>
+    <div class="div">Others</div>
+  </div>
+  <div class="Company">
+    <div class="heading">Company</div>
+    <div class="div">Complaint</div>
+    <div class="div">Careers</div>
+    <div class="div">Affiliate Marketing</div>
+    <div class="div">Support</div>
+  </div>
+  <div class="Get Help">
+    <div class="heading">Get Help</div>
+    <div class="div">Help Center</div>
+    <div class="div">Privacy Policy</div>
+    <div class="div">Terms</div>
+    <div class="div">Login</div>
+  </div>
+</div>
+<div class="footer3">Copyright © <h4>ShoPperZ</h4> 2021-2028</div>
+</footer>
+<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+<script src="./ecommerce.js"></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+

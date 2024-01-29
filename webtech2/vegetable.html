@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--<link rel="stylesheet" href="C:\Users\sushm\OneDrive\Desktop\webtech2\home.css">
+  <link href=""C:\Users\sushm\OneDrive\Desktop\webtech2\home.css"" rel="stylesheet">-->
+
+  <title>Vegetable Shop</title>
+
+
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    .vegetable-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      
+    }
+
+    .vegetable {
+      text-align: center;
+      margin: 15px;
+    }
+
+    img {
+      width: 150px;
+      height: 150px;
+      cursor: pointer;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin: 5px;
+    }
+
+    button {
+      background-color: #4caf50;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 5px;
+      display: none;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .options {
+      display: none;
+    }
+
+    .view-cart {
+      text-align: right;
+      margin-top: 20px;
+    }
+
+    .cart {
+      display: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+    .options {
+        display: none;
+      }
+      body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+
+.vegetable {
+  text-align: center;
+  margin: 15px;
+}
+
+#heading{
+  color: chartreuse;
+  font-size:large;
+  font-weight:bold;
+  font-size: 200px;
+}
+
+.fruit {
+  display: flex;
+  flex-direction: row; /* Updated to display items in a row */
+  justify-content: space-between;
+       /To space between the edge and to item/
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/Extra/
+.vegetable {
+  text-align: center;
+  margin: 15px;
+  width: calc(33.33% - 30px); /* 30px is the total margin (15px on each side) */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.vegetable-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row; /* Added this line to ensure horizontal alignment */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+  background: black;
+}
+.heading ul {
+  display: flex;
+}
+.logo a {
+  color: white;
+  transition-duration: 1s;
+  font-weight: 800;
+}
+.logo a:hover {
+  color: rgb(240, 197, 6);
+  transition-duration: 1s;
+}
+.heading ul li {
+  list-style: none;
+}
+.heading ul li a {
+  margin: 5px;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  position: relative;
+  color: white;
+  margin: 2px 14px;
+  font-size: 18px;
+  transition-duration: 1s;
+}
+.heading ul li a:active {
+  color: red;
+}
+.heading ul li a:hover {
+  color: rgb(243, 168, 7);
+  transition-duration: 1s;
+}
+
+.heading ul li a::before {
+  content: "";
+  height: 2px;
+  width: 0px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: white;
+  transition-duration: 1s;
+}
+.heading ul li a:hover::before {
+  width: 100%;
+  transition-duration: 1s;
+  background-color: rgb(243, 168, 7);
+}
+#input {
+  height: 30px;
+  width: 300px;
+  text-decoration: none;
+  border: 0px;
+  padding: 5px;
+}
+.logo a {
+  color: white;
+  font-size: 35px;
+  font-weight: 500;
+  text-decoration: none;
+}
+ion-icon {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  color: black;
+}
+ion-icon:hover {
+  cursor: pointer;
+}
+.search a {
+  display: flex;
+}
+header a ion-icon {
+  position: relative;
+  right: 3px;
+}
+
+.img-slider img {
+  height: 720px;
+  width: 1080px;
+}
+@keyframes slide {
+  0% {
+    left: 0px;
+  }
+  15% {
+    left: 0px;
+  }
+  20% {
+    left: -1080px;
+  }
+  32% {
+    left: -1080px;
+  }
+  35% {
+    left: -2160px;
+  }
+  47% {
+    left: -2160px;
+  }
+  50% {
+    left: -3240px;
+  }
+  63% {
+    left: -3240px;
+  }
+  66% {
+    left: -4320px;
+  }
+  79% {
+    left: -4320px;
+  }
+  82% {
+    left: -5400px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+.img-slider {
+  display: flex;
+  float: left;
+  position: relative;
+  width: 1080px;
+  height: 720px;
+  animation-name: slide;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  transition-duration: 2s;
+}
+
+.heading1 {
+  opacity: 0;
+}
+.search {
+  display: flex;
+  position: relative;
+}
+.section1 {
+  width: 1080px;
+  overflow: hidden;
+
+  justify-content: center;
+  align-items: center;
+  margin: 0px auto;
+}
+
+.section2 .container {
+  display: flex;
+  width: 100%;
+  height: max-content;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 10px auto;
+}
+.section2 .container .items {
+  margin: 10px;
+  width: 200px;
+  height: 300px;
+  background-color: white;
+  border: 2.5px solid black;
+  border-radius: 12px;
+}
+.section2 .container .items .name {
+  text-align: center;
+  background-color: rgb(240, 197, 6);
+  height: 25px;
+  padding-top: 4px;
+  color: white;
+  margin: 0;
+}
+.section2 .container .items .price {
+  float: left;
+  padding-left: 10px;
+  display: block;
+  width: 100%;
+  color: rgb(255, 0, 0);
+  font-weight: 650;
+}
+.section2 .container .items .info {
+  padding-left: 10px;
+  color: rgb(243, 168, 7);
+}
+.section2 .container .items .img img {
+  width: 200px;
+  height: 200px;
+  margin: 0;
+  padding: 0;
+  border-radius: 12px;
+  transition-duration: 0.8s;
+}
+.section2 .container .items .img {
+  overflow: hidden;
+  margin: 0;
+}
+.section2 .container .items:hover .img img {
+  transform: scale(1.2);
+  transition-duration: 0.8s;
+  border-radius: 12px;
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  align-items: center;
+  color: white;
+}
+
+.footer1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  margin-top: 15px;
+}
+.social-media {
+  display: flex;
+  justify-content: center;
+  color: white;
+  flex-wrap: wrap;
+}
+.social-media a {
+  color: white;
+  margin: 20px;
+  border-radius: 5px;
+  margin-top: 10px;
+  color: white;
+}
+.social-media a ion-icon {
+  color: white;
+  background-color: black;
+}
+.social-media a:hover ion-icon {
+  color: red;
+  transform: translateY(5px);
+}
+.footer2 {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  text-decoration: none;
+  flex-wrap: wrap;
+}
+.footer0 {
+  font-weight: 1200;
+  transition-duration: 1s;
+}
+.footer0:hover {
+  color: rgb(243, 168, 7);
+}
+.footer2 .heading {
+  font-weight: 900;
+  font-size: 18px;
+}
+.footer3 {
+  margin-top: 60px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.footer2 .heading:hover {
+  color: rgb(243, 168, 7);
+}
+.footer2 .div:hover {
+  transform: scale(1.05);
+}
+.footer3 h4 {
+  margin: 0 10px;
+}
+.footer2 div {
+  margin: 10px;
+}
+.menu {
+  visibility: hidden;
+}
+.heading1 .ham:active {
+  color: red;
+}
+.items {
+  overflow: hidden;
+}
+.ham,
+.close {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1250px) {
+  .heading ul li {
+    display: none;
+  }
+
+  .items {
+    transform: scale(0.9);
+  }
+  .img-slider img {
+    height: 60vw;
+    width: 80vw;
+  }
+  .ham:active {
+    color: red;
+  }
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu a ion-icon {
+    position: absolute;
+  }
+
+  @keyframes slide1 {
+    0% {
+      left: 0vw;
+    }
+    15% {
+      left: 0vw;
+    }
+    20% {
+      left: -80vw;
+    }
+    32% {
+      left: -80vw;
+    }
+    35% {
+      left: -160vw;
+    }
+    47% {
+      left: -160vw;
+    }
+    50% {
+      left: -240vw;
+    }
+    63% {
+      left: -240vw;
+    }
+    66% {
+      left: -320vw;
+    }
+    79% {
+      left: -320vw;
+    }
+    82% {
+      left: -400vw;
+    }
+    100% {
+      left: 0vw;
+    }
+  }
+  .menu ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    left: 0;
+    top: 0;
+    z-index: 11;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+  }
+  .close {
+    z-index: 34;
+
+    color: white;
+    background-color: black;
+  }
+  .close:active {
+    color: red;
+  }
+  .menu ul li {
+    list-style: none;
+    margin: 20px;
+    border-top: 3px solid white;
+    width: 80%;
+    text-align: center;
+
+    padding-top: 10px;
+  }
+  .menu ul li a {
+    text-decoration: none;
+    padding-top: 10px;
+    color: white;
+    font-weight: 900;
+  }
+  .menu ul li a:hover {
+    color: rgb(240, 197, 6);
+  }
+  .img-slider {
+    display: flex;
+    float: left;
+    position: relative;
+    width: 80%;
+    height: 60%;
+    animation-name: slide1;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    transition-duration: 2s;
+  }
+  .section1 {
+    width: 80%;
+    overflow: hidden;
+
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto;
+  }
+
+  .heading1 {
+    opacity: 1;
+    position: relative;
+    bottom: 8px;
+  }
+  .search a {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .heading1 .ham {
+    background-color: black;
+    color: white;
+  }
+  #input {
+    width: 200px;
+    flex-shrink: 2;
+  }
+  header {
+    height: 150px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .heading ul li {
+    display: none;
+  }
+  .heading1 {
+    opacity: 1;
+
+    bottom: 8px;
+  }
+
+  header {
+    height: 250px;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+  }
+  #input {
+    width: 150px;
+  }
+  .close {
+    z-index: 34;
+  }
+
+  .search a {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+}
+
+
+
+
+  </style>
+</head>
+<body>
+
+  <h1 id="heading">VEGETABLES</h1>
+<header>
+    <div class="logo"><a href="#">ShoPperZ</a></div>
+        <div class="menu">
+      <a href="#">
+        <ion-icon name="close" class="close"></ion-icon>
+      </a>
+
+      <ul>
+        <li><a href="home1.html" class="under">HOME</a></li>
+        <li><a href="home.html" class="under">SHOP</a></li>
+        <li><a href="discount.html" class="under">OUR PRODUCTS</a></li>
+        <li><a href="contact.html" class="under">CONTACT US</a></li>
+        <li><a href="about_us.html" class="under">ABOUT US</a></li>
+      </ul>
+    </div>
+    <div class="search">
+
+      <a href=""><input type="text" placeholder="search products" id="input">
+        <ion-icon class="s" name="search"></ion-icon>
+      </a>
+    </div>
+    <div class="heading">
+      <ul>
+        <li><a href="home1.html" class="under">HOME</a></li>
+        <li><a href="home.html" class="under">SHOP</a></li>
+        <li><a href="discount.html" class="under">OUR PRODUCTS</a></li>
+        <li><a href="contact.html" class="under">CONTACT US</a></li>
+        <li><a href="about_us.html" class="under">ABOUT US</a></li>
+      </ul>
+    </div>
+    <div class="heading1">
+      <ion-icon name="menu" class="ham"></ion-icon>
+    </div>
+  </header>
+ 
+  <section class="fruit" >
+  
+  <div class="vegetable-container">
+
+    <!-- Carrot -->
+<div class="vegetable" id="carrot">
+  <img src="https://tse3.mm.bing.net/th?id=OIP.zDlnPHZ5mb3_W-SanNkVDQHaHa&pid=Api&P=0&h=180.jpg" alt="Carrot" onclick="toggleOptions('carrot')" />
+  <p>Carrot</p>
+  <div id="allergy_info_carrot" class="options">
+      <p>Allergy Info:Contact Dermatitis</p>
+  </div>
+  <button onclick="toggleAllergyInfo('carrot')">Allergy Info</button>
+  <div id="nutritional_value_carrot" class="options">
+      <p>Nutritional Value :Rich in vit A</p>
+  </div>
+  <button onclick="toggleNutritionalValue('carrot')">Nutritional Value</button>
+  <p>Price: $1.5 per kg</p>
+  <p id="quantity_label_carrot" class="options">Quantity: <span id="quantity_carrot">1</span></p>
+  <p id="amount_label_carrot" class="options">Amount: $<span id="amount_carrot">1.5</span></p>
+  <button onclick="incrementQuantity('carrot')">+</button>
+  <button onclick="decrementQuantity('carrot')">-</button>
+  <button onclick="addToCart('carrot')">Add Carrot to Cart</button>
+  
+</div>
+
+<!-- Tomato -->
+<div class="vegetable" id="tomato">
+  <img src="https://tse4.mm.bing.net/th?id=OIP.Y53Fi_8Bw91VGgJq4cZMEAHaE8&pid=Api&P=0&h=180.jpg" alt="Tomato" onclick="toggleOptions('tomato')" />
+  <p>Tomato</p>
+  <div id="allergy_info_tomato" class="options">
+      <p>Allergy Info: None</p>
+  </div>
+  <button onclick="toggleAllergyInfo('tomato')">Allergy Info</button>
+  <div id="nutritional_value_tomato" class="options">
+      <p>Nutritional Value:Vitamin C</p>
+  </div>
+  <button onclick="toggleNutritionalValue('tomato')">Nutritional Value</button>
+  <p>Price: $1.0 per kg</p>
+  <p id="quantity_label_tomato" class="options">Quantity: <span id="quantity_tomato">1</span></p>
+  <p id="amount_label_tomato" class="options">Amount: $<span id="amount_tomato">1.0</span></p>
+  <button onclick="incrementQuantity('tomato')">+</button>
+  <button onclick="decrementQuantity('tomato')">-</button>
+  <button onclick="addToCart('tomato')">Add Tomato to Cart</button>
+</div>
+  <!-- Brinjal (Eggplant) -->
+  <div class="vegetable" id="brinjal">
+    <img src="https://tse3.mm.bing.net/th?id=OIP.Z3XZje0h-2MPPT9T2SPMVAHaHa&pid=Api&P=0&h=180.jpg" alt="Brinjal" onclick="toggleOptions('brinjal')" />
+    <p>Brinjal (Eggplant)</p>
+    <div id="allergy_info_brinjal" class="options">
+      <p>Allergy Info:Itchy Skin</p>
+    </div>
+    <button onclick="toggleAllergyInfo('brinjal')">Allergy Info</button>
+    <div id="nutritional_value_brinjal" class="options">
+      <p>Nutritional Value: Low in calories</p>
+    </div>
+    <button onclick="toggleNutritionalValue('brinjal')">Nutritional Value</button>
+    <p>Price: $2.0 per kg</p>
+    <p id="quantity_label_brinjal" class="options">Quantity: <span id="quantity_brinjal">1</span></p>
+    <p id="amount_label_brinjal" class="options">Amount: $<span id="amount_brinjal">2.0</span></p>
+    <button onclick="incrementQuantity('brinjal')">+</button>
+    <button onclick="decrementQuantity('brinjal')">-</button>
+    <button onclick="addToCart('brinjal')">Add Brinjal to Cart</button>
+  </div>
+  
+  <!-- Beans -->
+  <div class="vegetable" id="beans">
+    <img src="https://tse2.mm.bing.net/th?id=OIP.CNMtqoDlKlvh5PTl-VQE7gHaE8&pid=Api&P=0&h=180.jpg" alt="Beans" onclick="toggleOptions('beans')" />
+    <p>Beans</p>
+    <div id="allergy_info_beans" class="options">
+      <p>Allergy Info: None</p>
+    </div>
+    <button onclick="toggleAllergyInfo('beans')">Allergy Info</button>
+    <div id="nutritional_value_beans" class="options">
+      <p>Nutritional Value: Good source of fiber</p>
+    </div>
+    <button onclick="toggleNutritionalValue('beans')">Nutritional Value</button>
+    <p>Price: $2.5 per kg</p>
+    <p id="quantity_label_beans" class="options">Quantity: <span id="quantity_beans">1</span></p>
+    <p id="amount_label_beans" class="options">Amount: $<span id="amount_beans">2.5</span></p>
+    <button onclick="incrementQuantity('beans')">+</button>
+    <button onclick="decrementQuantity('beans')">-</button>
+    <button onclick="addToCart('beans')">Add to Cart</button>
+  </div>
+
+
+  <!-- Radish -->
+<div class="vegetable" id="radish">
+    <img src="https://tse4.mm.bing.net/th?id=OIP.FWwtZ10EJMZ0nvVFR9WUbAHaH9&pid=Api&P=0&h=180.jpg" alt="Radish" onclick="toggleOptions('radish')" />
+    <p>Radish</p>
+    <div id="allergy_info_radish" class="options">
+      <p>Allergy Info: None</p>
+    </div>
+    <button onclick="toggleAllergyInfo('radish')">Allergy Info</button>
+    <div id="nutritional_value_radish" class="options">
+      <p>Nutritional Value: Rich in Vitamin C</p>
+    </div>
+    <button onclick="toggleNutritionalValue('radish')">Nutritional Value</button>
+    <p>Price: $1.2 per kg</p>
+    <p id="quantity_label_radish" class="options">Quantity: <span id="quantity_radish">1</span></p>
+    <p id="amount_label_radish" class="options">Amount: $<span id="amount_radish">1.2</span></p>
+    <button onclick="incrementQuantity('radish')">+</button>
+    <button onclick="decrementQuantity('radish')">-</button>
+    <button onclick="addToCart('radish')">Add to Cart</button>
+    
+  </div>
+  
+  <!-- Cauliflower -->
+  <div class="vegetable" id="cauliflower">
+    <img src="https://tse4.mm.bing.net/th?id=OIP.qbtfTieEpOA4y66SY0zvEAHaHa&pid=Api&P=0&h=180.jpg" alt="Cauliflower" onclick="toggleOptions('cauliflower')" />
+    <p>Cauliflower</p>
+    <div id="allergy_info_cauliflower" class="options">
+      <p>Allergy Info:Constipation</p>
+    </div>
+    <button onclick="toggleAllergyInfo('cauliflower')">Allergy Info</button>
+    <div id="nutritional_value_cauliflower" class="options">
+      <p>Nutritional Value: High in Fiber</p>
+    </div>
+    <button onclick="toggleNutritionalValue('cauliflower')">Nutritional Value</button>
+    <p>Price: $2.5 per kg</p>
+    <p id="quantity_label_cauliflower" class="options">Quantity: <span id="quantity_cauliflower">1</span></p>
+    <p id="amount_label_cauliflower" class="options">Amount: $<span id="amount_cauliflower">2.5</span></p>
+    <button onclick="incrementQuantity('cauliflower')">+</button>
+    <button onclick="decrementQuantity('cauliflower')">-</button>
+    <button onclick="addToCart('cauliflower')">Add to Cart</button>
+  </div>
+  
+  <!-- Ladyfinger (Okra) -->
+  <div class="vegetable" id="ladyfinger">
+    <img src="https://tse3.mm.bing.net/th?id=OIP.fxjZnToS1OoWKOQfNcW0fAHaFy&pid=Api&P=0&h=180.jpg" alt="Ladyfinger" onclick="toggleOptions('ladyfinger')" />
+    <p>Ladyfinger (Okra)</p>
+    <div id="allergy_info_ladyfinger" class="options">
+      <p>Allergy Info:None</p>
+    </div>
+    <button onclick="toggleAllergyInfo('ladyfinger')">Allergy Info</button>
+    <div id="nutritional_value_ladyfinger" class="options">
+      <p>Nutritional Value: Rich in Vitamins</p>
+    </div>
+    <button onclick="toggleNutritionalValue('ladyfinger')">Nutritional Value</button>
+    <p>Price: $1.8 per kg</p>
+    <p id="quantity_label_ladyfinger" class="options">Quantity: <span id="quantity_ladyfinger">1</span></p>
+    <p id="amount_label_ladyfinger" class="options">Amount: $<span id="amount_ladyfinger">1.8</span></p>
+    <button onclick="incrementQuantity('ladyfinger')">+</button>
+    <button onclick="decrementQuantity('ladyfinger')">-</button>
+    <button onclick="addToCart('ladyfinger')">Add to Cart</button>
+  </div>
+
+
+  <!-- Onion -->
+<div class="vegetable" id="onion">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_c4mzTsqYoLWHNziM4mHQEEp6-qCek6H7bQ&usqp=CAU" alt="Onion" onclick="toggleOptions('onion')" />
+    <p>Onion</p>
+    <div id="allergy_info_onion" class="options">
+      <p>Allergy Info:Throat Infection</p>
+    </div>
+    <button onclick="toggleAllergyInfo('onion')">Allergy Info</button>
+    <div id="nutritional_value_onion" class="options">
+      <p>Nutritional Value: Rich in Antioxidants</p>
+    </div>
+    <button onclick="toggleNutritionalValue('onion')">Nutritional Value</button>
+    <p>Price: $1.0 per kg</p>
+    <p id="quantity_label_onion" class="options">Quantity: <span id="quantity_onion">1</span></p>
+    <p id="amount_label_onion" class="options">Amount: $<span id="amount_onion">1.0</span></p>
+    <button onclick="incrementQuantity('onion')">+</button>
+    <button onclick="decrementQuantity('onion')">-</button>
+    <button onclick="addToCart('onion')">Add to Cart</button>
+  </div>
+  
+  <!-- Cabbage -->
+  <div class="vegetable" id="cabbage">
+    <img src="https://tse4.mm.bing.net/th?id=OIP.tk7a-a8Sy9xxx6YbejIYagHaHd&pid=Api&P=0&h=180.jpg" alt="Cabbage" onclick="toggleOptions('cabbage')" />
+    <p>Cabbage</p>
+    <div id="allergy_info_cabbage" class="options">
+      <p>Allergy Info: None</p>
+    </div>
+    <button onclick="toggleAllergyInfo('cabbage')">Allergy Info</button>
+    <div id="nutritional_value_cabbage" class="options">
+      <p>Nutritional Value: High in Vitamin K</p>
+    </div>
+    <button onclick="toggleNutritionalValue('cabbage')">Nutritional Value</button>
+    <p>Price: $1.5 per kg</p>
+    <p id="quantity_label_cabbage" class="options">Quantity: <span id="quantity_cabbage">1</span></p>
+    <p id="amount_label_cabbage" class="options">Amount: $<span id="amount_cabbage">1.5</span></p>
+    <button onclick="incrementQuantity('cabbage')">+</button>
+    <button onclick="decrementQuantity('cabbage')">-</button>
+    <button onclick="addToCart('cabbage')">Add to Cart</button>
+  </div>
+  
+  
+  
+  <!-- Potato -->
+  <div class="vegetable" id="potato">
+    <img src="https://tse2.mm.bing.net/th?id=OIP.F0aQXnmCDGEadfNivihUAQHaF8&pid=Api&P=0&h=180.jpg" alt="Potato" onclick="toggleOptions('potato')" />
+    <p>Potato</p>
+    <div id="allergy_info_potato" class="options">
+      <p>Allergy Info:Gas Fart</p>
+    </div>
+    <button onclick="toggleAllergyInfo('potato')">Allergy Info</button>
+    <div id="nutritional_value_potato" class="options">
+      <p>Nutritional Value: Rich in Potassium</p>
+    </div>
+    <button onclick="toggleNutritionalValue('potato')">Nutritional Value</button>
+    <p>Price: $1.2 per kg</p>
+    <p id="quantity_label_potato" class="options">Quantity: <span id="quantity_potato">1</span></p>
+    <p id="amount_label_potato" class="options">Amount: $<span id="amount_potato">1.2</span></p>
+    <button onclick="incrementQuantity('potato')">+</button>
+    <button onclick="decrementQuantity('potato')">-</button>
+    <button onclick="addToCart('potato')">Add to Cart</button>
+  </div>
+
+  <!-- Drumstick -->
+<div class="vegetable" id="drumstick">
+    <img src="https://tse3.mm.bing.net/th?id=OIP.MSeondhbWmgIlJl3Gkx71gHaCv&pid=Api&P=0&h=180.jpg" alt="Drumstick" onclick="toggleOptions('drumstick')" />
+    <p>Drumstick</p>
+    <div id="allergy_info_drumstick" class="options">
+      <p>Allergy Info: None</p>
+    </div>
+    <button onclick="toggleAllergyInfo('drumstick')">Allergy Info</button>
+    <div id="nutritional_value_drumstick" class="options">
+      <p>Nutritional Value: Rich in Vitamins</p>
+    </div>
+    <button onclick="toggleNutritionalValue('drumstick')">Nutritional Value</button>
+    <p>Price: $2.5 per kg</p>
+    <p id="quantity_label_drumstick" class="options">Quantity: <span id="quantity_drumstick">1</span></p>
+    <p id="amount_label_drumstick" class="options">Amount: $<span id="amount_drumstick">2.5</span></p>
+    <button onclick="incrementQuantity('drumstick')">+</button>
+    <button onclick="decrementQuantity('drumstick')">-</button>
+    <button onclick="addToCart('drumstick')">Add to Cart</button>
+  </div>
+  
+  <!-- Bitter Gourd -->
+  <div class="vegetable" id="bittergourd">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrziq6JJSiIxhGs26Ud-C6rrQXNWDieLgY0g&usqp=CAU" alt="Bitter Gourd" onclick="toggleOptions('bittergourd')" />
+    <p>Bitter Gourd</p>
+    <div id="allergy_info_bittergourd" class="options">
+      <p>Allergy Info: None</p>
+    </div>
+    <button onclick="toggleAllergyInfo('bittergourd')">Allergy Info</button>
+    <div id="nutritional_value_bittergourd" class="options">
+      <p>Nutritional Value: Low in Calories</p>
+    </div>
+    <button onclick="toggleNutritionalValue('bittergourd')">Nutritional Value</button>
+    <p>Price: $3.0 per kg</p>
+    <p id="quantity_label_bittergourd" class="options">Quantity: <span id="quantity_bittergourd">1</span></p>
+    <p id="amount_label_bittergourd" class="options">Amount: $<span id="amount_bittergourd">3.0</span></p>
+    <button onclick="incrementQuantity('bittergourd')">+</button>
+    <button onclick="decrementQuantity('bittergourd')">-</button>
+    <button onclick="addToCart('bittergourd')">Add to Cart</button>
+  </div>
+  
+  <!-- Raw Banana -->
+  <div class="vegetable" id="rawbanana">
+    <img src="https://tse1.mm.bing.net/th?id=OIP.YVI5uDx_JVP50T7Vg_7D5AHaFg&pid=Api&P=0&h=180.jpg" alt="Raw Banana" onclick="toggleOptions('rawbanana')" />
+    <p>Raw Banana</p>
+    <div id="allergy_info_rawbanana" class="options">
+      <p>Allergy Info: None</p>
+    </div>
+    <button onclick="toggleAllergyInfo('rawbanana')">Allergy Info</button>
+    <div id="nutritional_value_rawbanana" class="options">
+      <p>Nutritional Value: Good source of Potassium</p>
+    </div>
+    <button onclick="toggleNutritionalValue('rawbanana')">Nutritional Value</button>
+    <p>Price: $1.8 per kg</p>
+    <p id="quantity_label_rawbanana" class="options">Quantity: <span id="quantity_rawbanana">1</span></p>
+    <p id="amount_label_rawbanana" class="options">Amount: $<span id="amount_rawbanana">1.8</span></p>
+    <button onclick="incrementQuantity('rawbanana')">+</button>
+    <button onclick="decrementQuantity('rawbanana')">-</button>
+    <button onclick="addToCart('rawbanana')">Add to Cart</button>
+  </div>
+
+
+  <!-- Capsicum -->
+<div class="vegetable" id="capsicum">
+  <img src="https://tse4.mm.bing.net/th?id=OIP.JQuW3c_cI51jRCjugGPydgHaFj&pid=Api&P=0&h=180.jpg" alt="Capsicum" onclick="toggleOptions('capsicum')" />
+  <p>Capsicum</p>
+  <div id="allergy_info_capsicum" class="options">
+      <p>Allergy Info: None</p>
+  </div>
+  <button onclick="toggleAllergyInfo('capsicum')">Allergy Info</button>
+  <div id="nutritional_value_capsicum" class="options">
+      <p>Nutritional Value: Rich in Vitamin C</p>
+  </div>
+  <button onclick="toggleNutritionalValue('capsicum')">Nutritional Value</button>
+  <p>Price: $2.5 per kg</p>
+  <p id="quantity_label_capsicum" class="options">Quantity: <span id="quantity_capsicum">1</span></p>
+  <p id="amount_label_capsicum" class="options">Amount: $<span id="amount_capsicum">2.5</span></p>
+  <button onclick="incrementQuantity('capsicum')">+</button>
+  <button onclick="decrementQuantity('capsicum')">-</button>
+  <button onclick="addToCart('capsicum')">Add to Cart</button>
+</div>
+
+<!-- Pumpkin -->
+<div class="vegetable" id="pumpkin">
+  <img src="https://tse1.mm.bing.net/th?id=OIP.5TA7VWclExPqjBiN8pqfZAHaE8&pid=Api&P=0&h=180.jpg" alt="Pumpkin" onclick="toggleOptions('pumpkin')" />
+  <p>Pumpkin</p>
+  <div id="allergy_info_pumpkin" class="options">
+      <p>Allergy Info: None</p>
+  </div>
+  <button onclick="toggleAllergyInfo('pumpkin')">Allergy Info</button>
+  <div id="nutritional_value_pumpkin" class="options">
+      <p>Nutritional Value: High in Vitamin A</p>
+  </div>
+  <button onclick="toggleNutritionalValue('pumpkin')">Nutritional Value</button>
+  <p>Price: $1.5 per kg</p>
+  <p id="quantity_label_pumpkin" class="options">Quantity: <span id="quantity_pumpkin">1</span></p>
+  <p id="amount_label_pumpkin" class="options">Amount: $<span id="amount_pumpkin">1.5</span></p>
+  <button onclick="incrementQuantity('pumpkin')">+</button>
+  <button onclick="decrementQuantity('pumpkin')">-</button>
+  <button onclick="addToCart('pumpkin')">Add to Cart</button>
+</div>
+
+   
+
+
+
+      
+
+
+    <!-- Add more vegetables here -->
+
+  </div>
+  </section>
+
+  <div class="view-cart">
+    <a href="#" onclick="toggleCart()">View Cart</a>
+  </div>
+
+  <div class="cart">
+    <h2>Shopping Cart</h2>
+    <div id="cart-message"></div>
+    <ul id="cart-list"></ul>
+  </div>
+
+  <script>
+    function toggleOptions(vegetable) {
+      const options = document.querySelectorAll(`#${vegetable} .options, #${vegetable} button`);
+      options.forEach(option => option.style.display = option.style.display === 'none' ? 'block' : 'none');
+    }
+
+    function toggleNutritionalValue(vegetable) {
+        const nutritionalValueElement = document.getElementById(`nutritional_value_${vegetable}`);
+        const allergyInfoElement = document.getElementById(`allergy_info_${vegetable}`);
+      
+        // Set the nutritional information based on the vegetable
+        let nutritionalInfo = '';
+      
+        // Add more cases for other vegetables as needed
+        switch (vegetable) {
+          case 'carrot':
+            nutritionalInfo = 'High in Vitamin A, low in calories and a good source of fiber.';
+            break;
+          // Add more cases for other vegetables here
+      
+          default:
+            nutritionalInfo = 'Nutritional information not available.';
+        }
+      
+        nutritionalValueElement.innerHTML = `<p>Nutritional Value: ${nutritionalInfo}</p>`;
+      
+        nutritionalValueElement.style.display = 'block';
+        allergyInfoElement.style.display = 'none';
+      }
+      
+
+    function toggleNutritionalValue(vegetable) {
+      const nutritionalValueElement = document.getElementById(`nutritional_value_${vegetable}`);
+      const allergyInfoElement = document.getElementById(`allergy_info_${vegetable}`);
+
+      nutritionalValueElement.style.display = 'block';
+      allergyInfoElement.style.display = 'none';
+    }
+
+    function addToCart(vegetable) {
+      const quantityElement = document.getElementById(`quantity_${vegetable}`);
+      const amountElement = document.getElementById(`amount_${vegetable}`);
+      const currentQuantity = parseInt(quantityElement.innerText, 10);
+      const currentAmount = parseFloat(amountElement.innerText);
+
+      const cartList = document.getElementById('cart-list');
+      const listItem = document.createElement('li');
+      listItem.innerText = `${vegetable} - Quantity: ${currentQuantity}, Amount: $${currentAmount.toFixed(2)}`;
+
+      cartList.appendChild(listItem);
+      document.getElementById('cart-message').innerText = `${vegetable} added to cart.`;
+
+      // Show remove button
+      const removeButton = document.createElement('button');
+      removeButton.innerText = 'Remove';
+      removeButton.onclick = function () {
+        listItem.remove();
+        document.getElementById('cart-message').innerText = `${vegetable} removed from cart.`;
+        removeButton.remove(); // Remove the button after removal
+      };
+      listItem.appendChild(removeButton);
+    }
+
+ function incrementQuantity(vegetable) {
+    const quantityElement = document.getElementById(`quantity_${vegetable}`);
+    const amountElement = document.getElementById(`amount_${vegetable}`);
+    const pricePerKg = parseFloat(amountElement.innerText) / parseInt(quantityElement.innerText, 10);
+
+    const currentQuantity = parseInt(quantityElement.innerText, 10);
+
+    quantityElement.innerText = currentQuantity + 1;
+    amountElement.innerText = (pricePerKg * (currentQuantity + 1)).toFixed(2);
+}
+
+  function decrementQuantity(vegetable) {
+    const quantityElement = document.getElementById(`quantity_${vegetable}`);
+    const amountElement = document.getElementById(`amount_${vegetable}`);
+    const pricePerKg = parseFloat(amountElement.innerText) / parseInt(quantityElement.innerText, 10);
+
+    const currentQuantity = parseInt(quantityElement.innerText, 10);
+
+    quantityElement.innerText = currentQuantity -1;
+    amountElement.innerText = (pricePerKg * (currentQuantity -1)).toFixed(2);
+}
+
+    function toggleCart() {
+      const cart = document.querySelector('.cart');
+      cart.style.display = cart.style.display === 'none' ? 'block' : 'none';
+    }
+
+
+    function toggleAllergyInfo(vegetable) {
+    const nutritionalValueElement = document.getElementById(`nutritional_value_${vegetable}`);
+    const allergyInfoElement = document.getElementById(`allergy_info_${vegetable}`);
+
+    nutritionalValueElement.style.display = 'none';
+
+    if (allergyInfoElement.innerHTML.trim() !== '') {
+        // If allergy information is available, display it
+        allergyInfoElement.style.display = 'block';
+    } else {
+        // If no allergy information is available, display a default message
+        allergyInfoElement.innerHTML = '<p>Allergy Info: Not available.</p>';
+        allergyInfoElement.style.display = 'block';
+    }
+}
+
+  </script>
+
+    <div class="footer2">
+      <div class="product">
+        <div class="heading">Products</div>
+        <div class="div">Sell your Products</div>
+        <div class="div">Advertise</div>
+        <div class="div">Pricing</div>
+        <div class="div">Product Buisness</div>
+
+      </div>
+      <div class="services">
+        <div class="heading">Services</div>
+        <div class="div">Return</div>
+        <div class="div">Cash Back</div>
+        <div class="div">Affiliate Marketing</div>
+        <div class="div">Others</div>
+      </div>
+      <div class="Company">
+        <div class="heading">Company</div>
+        <div class="div">Complaint</div>
+        <div class="div">Careers</div>
+        <div class="div">Affiliate Marketing</div>
+        <div class="div">Support</div>
+      </div>
+      <div class="Get Help">
+        <div class="heading">Get Help</div>
+        <div class="div">Help Center</div>
+        <div class="div">Privacy Policy</div>
+        <div class="div">Terms</div>
+        <div class="div">Login</div>
+      </div>
+    </div>
+   <div class="footer3">Copyright © <h4>ShoPperZ</h4> 2021-2028</div>
+  </footer>
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+  <script src="./ecommerce.js"></script>
+
+
+</body>
+</html>
